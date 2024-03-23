@@ -1,9 +1,18 @@
 {
-  "extends": ["astro/tsconfigs/base", "astro/tsconfigs/strict"],
+  "extends": ["astro/tsconfigs/strict", "astro/tsconfigs/base"],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "C:/Programowanie/startify",
     "paths": {
       "@/*": ["*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   }
 }

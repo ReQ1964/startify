@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *,
@@ -23,6 +24,10 @@ ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+
+body {
+  padding-top: 101.5px;
 }
 
 ol,

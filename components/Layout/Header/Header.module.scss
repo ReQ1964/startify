@@ -1,0 +1,43 @@
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  .controls {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    padding: calc(var(--block-padding) - 0.5rem) var(--block-padding);
+    background-color: var(--background-color-primary);
+    .logo {
+      height: 50px;
+      width: 50px;
+    }
+    .menuIcon {
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+    }
+  }
+  .mobileNavbar {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    transform: translateY(-150%);
+    transition: 0.5s;
+    padding: 1rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--common-gap);
+    }
+  }
+  .active {
+    transform: translateY(0);
+  }
+}
