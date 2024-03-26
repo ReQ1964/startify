@@ -1,9 +1,10 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
+const { class: className, ...rest } = Astro.props;
 ---
 
-<ul>
+<ul class={className} {...rest}>
   <li>
     <a class={currentPath === '' ? 'active' : ''} href="/">HOME</a>
   </li>
@@ -22,12 +23,14 @@ const currentPath = pathname.slice(1);
 </ul>
 
 <style lang="scss">
-  a {
-    text-decoration: none;
-    color: var(--text-color-primary);
-    text-align: center;
-  }
-  .active {
-    font-weight: bold;
+  ul {
+    a {
+      text-decoration: none;
+      color: var(--text-color-primary);
+      text-align: center;
+    }
+    .active {
+      font-weight: bold;
+    }
   }
 </style>

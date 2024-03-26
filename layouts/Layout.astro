@@ -1,6 +1,7 @@
 ---
 import Header from '@/components/Layout/Header/Header';
 import NavigationLinks from '@/components/UI/NavigationLinks.astro';
+import Footer from '@/components/Layout/Footer/Footer.astro';
 
 interface LayoutProps {
   title?: string;
@@ -38,6 +39,6 @@ const {
       <NavigationLinks slot="links" />
     </Header>
     <slot />
-    <!-- footer -->
+    <Footer />
   </body>
 </html>
