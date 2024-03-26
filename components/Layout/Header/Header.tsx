@@ -13,7 +13,7 @@ const Header = ({ links }: { links: ReactNode }) => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.controls}>
+      <div className={classes.navigation}>
         <a href="/">
           <img
             className={classes.logo}
@@ -36,10 +36,11 @@ const Header = ({ links }: { links: ReactNode }) => {
             onClick={handleMenuState}
           />
         )}
+        <nav className={classes.desktopLinks}>{links}</nav>
       </div>
 
       <nav
-        className={`${classes.mobileNavbar} ${isMenuOpen ? classes.active : ''}`}
+        className={`${classes.mobileLinks} ${isMenuOpen ? classes.active : ''}`}
       >
         {links}
       </nav>

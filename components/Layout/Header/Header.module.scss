@@ -3,7 +3,7 @@
   z-index: 1000;
   width: 100%;
   top: 0;
-  .controls {
+  .navigation {
     position: relative;
     z-index: 100;
     display: flex;
@@ -21,8 +21,15 @@
       height: 2.5rem;
       cursor: pointer;
     }
+    .desktopLinks {
+      display: none;
+      ul {
+        display: flex;
+        gap: 2.5rem;
+      }
+    }
   }
-  .mobileNavbar {
+  .mobileLinks {
     position: absolute;
     z-index: 10;
     width: 100%;
@@ -39,5 +46,22 @@
   }
   .active {
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .header {
+    .navigation {
+      padding: 2rem 4rem;
+      .desktopLinks {
+        display: block;
+      }
+      .menuIcon {
+        display: none;
+      }
+    }
+    .mobileLinks {
+      display: none;
+    }
   }
 }
