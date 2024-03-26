@@ -29,6 +29,9 @@ ul {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-top: 101.5px;
 }
 
