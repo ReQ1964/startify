@@ -1,0 +1,138 @@
+---
+import Image from 'astro/components/Image.astro';
+import homeOffice from '@/src/assets/img/home-office.png';
+import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
+---
+
+<section class="introduction">
+  <div class="upperContainer">
+    <div class="heading">
+      <div class="title">
+        <h1>HR STARTIFY</h1>
+        <h3>START YOUR HR PROPERLY</h3>
+      </div>
+      <p class="description">
+        Our mission is simple: to provide you with a comprehensive HR expertise
+        & top-notch solutions exactly when you need it in a pay-as-you service
+        model. We give you safeguard peace of mind while you focus on your
+        day-to-day business.
+      </p>
+    </div>
+    <div class="officeBanner">
+      <Image
+        src={homeOffice}
+        alt="An office with a few chairs and a lookout on a city."
+        class="officeImage"
+      />
+      <Image
+        src={homeOfficeBg}
+        alt="A grey background for the office photo."
+        class="officeBackgroundImage"
+      />
+    </div>
+  </div>
+  <p class="catchphrase">
+    <span>EMPOWER</span> your business with strategic HR for growth and success.
+  </p>
+</section>
+
+<style lang="scss">
+  .introduction {
+    padding: 0 var(--content-block-padding);
+    max-width: 1800px;
+    margin: 0 auto;
+    .upperContainer {
+      .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .title {
+          h1 {
+            color: var(--text-color-secondary);
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      .officeBanner {
+        position: relative;
+        height: 280px;
+        margin-top: 4rem;
+        .officeImage {
+          position: absolute;
+          z-index: 3;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          max-width: 300px;
+        }
+        .officeBackgroundImage {
+          position: absolute;
+          z-index: 1;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          max-width: 350px;
+        }
+      }
+    }
+
+    .catchphrase {
+      text-align: center;
+      span {
+        color: var(--text-color-secondary);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .introduction {
+      padding: 1.5rem 3rem;
+      .upperContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        .heading {
+          width: 40%;
+          gap: 2rem;
+          .title {
+            h1 {
+              font-size: 2.4rem;
+            }
+            h3 {
+              font-size: 1.8rem;
+            }
+          }
+        }
+        .officeBanner {
+          width: 50%;
+          max-width: 500px;
+          .officeImage {
+            max-width: 100%;
+          }
+          .officeBackgroundImage {
+            max-width: 100%;
+          }
+        }
+      }
+      .catchphrase {
+        margin-top: 8rem;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .introduction {
+      .upperContainer {
+        gap: 8rem;
+        .heading {
+          gap: 3rem;
+        }
+      }
+    }
+  }
+</style>
