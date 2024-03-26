@@ -1,4 +1,8 @@
 ---
+import Header from '@/components/Layout/Header/Header';
+import NavigationLinks from '@/components/UI/NavigationLinks.astro';
+import Footer from '@/components/Layout/Footer/Footer.astro';
+
 interface LayoutProps {
   title?: string;
   description?: string;
@@ -31,8 +35,10 @@ const {
   </head>
 
   <body>
-    <!-- header -->
+    <Header client:only="react">
+      <NavigationLinks slot="links" />
+    </Header>
     <slot />
-    <!-- footer -->
+    <Footer />
   </body>
 </html>

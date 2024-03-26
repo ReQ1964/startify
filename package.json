@@ -15,13 +15,19 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
+    "@astrojs/react": "^3.1.0",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.22",
     "astro": "^4.5.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.72.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^0.32.0",
+    "eslint-plugin-react": "^7.34.1",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
