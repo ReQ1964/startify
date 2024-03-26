@@ -10,7 +10,8 @@
     align-items: center;
     justify-content: space-between;
     height: 20%;
-    padding: calc(var(--block-padding) - 0.5rem) var(--block-padding);
+    padding: calc(var(--content-block-padding) - 0.5rem)
+      var(--content-block-padding);
     background-color: var(--background-color-primary);
     .logo {
       height: 50px;
@@ -52,7 +53,8 @@
 @media (min-width: 640px) {
   .header {
     .navigation {
-      padding: 2rem 4rem;
+      padding: calc(var(--content-block-padding) - 0.5rem)
+        calc(var(--content-block-padding) * 2);
       .desktopLinks {
         display: block;
       }
