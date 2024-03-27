@@ -1,0 +1,126 @@
+---
+import ButtonLink from '../UI/ButtonLink.astro';
+import HorizontalLine from '../UI/HorizontalLine.astro';
+import Image from 'astro/components/Image.astro';
+import img from '@/src/assets/img/home-office.png';
+---
+
+<section class="principles">
+  <div class="heading">
+    <div class="title">
+      <h1>How we can help your</h1>
+      <h2>BUSINESS</h2>
+    </div>
+    <p>
+      We provide services of setting-up the HR departments for start-ups and
+      scaling-up/developing businesses.
+    </p>
+  </div>
+  <HorizontalLine />
+  <div class="imageContainer">
+    <Image src={img} alt="asdf" />
+  </div>
+  <article class="principlesList">
+    <ol>
+      <li>
+        We provide you with an on-demand access to our dedicated HR Professional
+        based in your real company&apos;s need, providing you with the
+        flexibility on scaling up or down with affordable monthly fee so you
+        don&apos;t have to maintain a full time resource.
+      </li>
+      <li>
+        We equip you with our comprehensive HR suite and give you full access to
+        our templates, forms & policies.
+      </li>
+      <li>
+        We take all the administrative burden away from you in terms of
+        compliance & legislation, recruitment, onboarding & employee management
+      </li>
+      <li>
+        We provide you with strategic support when you go through a rapid
+        scaling of your people capabilities
+      </li>
+    </ol>
+    <ButtonLink text="Discover more" to="/offer" />
+  </article>
+</section>
+
+<style lang="scss">
+  .principles {
+    padding: var(--content-block-padding);
+    max-width: 1800px;
+    margin: 0 auto;
+    .heading {
+      max-width: 550px;
+      .title {
+        max-width: 450px;
+        margin: 0 auto;
+        h1 {
+          width: 95%;
+        }
+        h2 {
+          color: var(--text-color-secondary);
+          text-align: right;
+          width: 100%;
+          font-size: 1.7rem;
+        }
+      }
+      p {
+        margin: 2rem 0 3rem 30px;
+        width: 95%;
+      }
+    }
+    .principlesList {
+      margin-top: 4rem;
+      max-width: 550px;
+      ol {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        li {
+          &::before {
+            color: var(--text-color-secondary);
+            content: '0' counter(list) '.';
+            left: -1px;
+            position: absolute;
+            text-align: right;
+            width: 26px;
+          }
+          width: 95%;
+          counter-increment: list;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .principles {
+      padding: var(--media-content-block-padding);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+      .imageContainer {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        place-self: center;
+      }
+      .heading {
+        grid-column: 2;
+        .title {
+          h1 {
+            font-size: 1.8rem;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+        }
+      }
+      .principlesList {
+        margin: 0;
+      }
+    }
+  }
+</style>

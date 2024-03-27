@@ -1,10 +1,10 @@
 ---
 import NavigationLinks from '@/components/UI/NavigationLinks.astro';
+import HorizontalLine from '@/components/UI/HorizontalLine.astro';
 ---
 
 <footer>
-  <div id="line"></div>
-
+  <HorizontalLine />
   <div class="footerData">
     <nav>
       <NavigationLinks class="footerLinks" />
@@ -22,12 +22,7 @@ import NavigationLinks from '@/components/UI/NavigationLinks.astro';
   footer {
     margin-top: auto;
     padding: 1rem 2rem;
-    #line {
-      height: 2px;
-      width: 95%;
-      background-color: #d9d9d9;
-      margin: 4rem auto 1rem;
-    }
+
     .footerData {
       display: flex;
       flex-direction: column;
