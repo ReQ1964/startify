@@ -1,13 +1,13 @@
 ---
-
+const { class: className, ...rest } = Astro.props;
 ---
 
-<div id="line"></div>
+<div class={className} {...rest}></div>
 
 <style lang="scss">
-  #line {
+  div {
     height: 2px;
     background-color: #d9d9d9;
-    margin: 0 auto 1rem;
+    margin: 0 auto;
   }
 </style>

@@ -2,7 +2,8 @@
 import ButtonLink from '../UI/ButtonLink.astro';
 import HorizontalLine from '../UI/HorizontalLine.astro';
 import Image from 'astro/components/Image.astro';
-import img from '@/src/assets/img/home-office.png';
+import owner from '@/src/assets/img/owner-1.png';
+import ownerBg from '@/src/assets/img/home-owner-bg.png';
 ---
 
 <section class="principles">
@@ -16,9 +17,10 @@ import img from '@/src/assets/img/home-office.png';
       scaling-up/developing businesses.
     </p>
   </div>
-  <HorizontalLine />
+  <HorizontalLine class="line" />
   <div class="imageContainer">
-    <Image src={img} alt="asdf" />
+    <Image src={owner} alt="asdf" class="ownerImg" />
+    <Image src={ownerBg} alt="asdf" class="ownerBgImg" />
   </div>
   <article class="principlesList">
     <ol>
@@ -47,38 +49,52 @@ import img from '@/src/assets/img/home-office.png';
 
 <style lang="scss">
   .principles {
-    padding: var(--content-block-padding);
-    max-width: 1800px;
+    padding: var(--block-padding-mobile);
+    max-width: 1200px;
     margin: 0 auto;
     .heading {
       max-width: 550px;
+      min-width: 300px;
+      margin: 0 auto;
       .title {
-        max-width: 450px;
+        max-width: 400px;
         margin: 0 auto;
-        h1 {
-          width: 95%;
-        }
         h2 {
           color: var(--text-color-secondary);
           text-align: right;
-          width: 100%;
           font-size: 1.7rem;
         }
       }
       p {
-        margin: 2rem 0 3rem 30px;
-        width: 95%;
+        padding: 1rem 0 3rem;
       }
     }
+    .imageContainer {
+      max-width: 300px;
+      position: relative;
+      margin: var(--content-blocks-margin) auto 0;
+      .ownerImg {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+      }
+      .ownerBgImg {
+        z-index: 1;
+      }
+    }
+
     .principlesList {
-      margin-top: 4rem;
-      max-width: 550px;
+      max-width: 500px;
+      margin: 2rem auto;
       ol {
         position: relative;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: var(--content-blocks-margin);
         li {
           &::before {
             color: var(--text-color-secondary);
@@ -96,20 +112,27 @@ import img from '@/src/assets/img/home-office.png';
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     .principles {
-      padding: var(--media-content-block-padding);
+      padding: var(--block-padding-desktop);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 4rem;
+      grid-template-columns: 1fr 1.5fr;
+      column-gap: 3rem;
       .imageContainer {
         grid-column: 1;
         grid-row: 1 / 4;
         place-self: center;
+        max-width: none;
+        margin: 0 auto;
+      }
+      .line {
+        width: 100%;
       }
       .heading {
         grid-column: 2;
+        max-width: none;
         .title {
+          max-width: 450px;
           h1 {
             font-size: 1.8rem;
           }
@@ -117,9 +140,12 @@ import img from '@/src/assets/img/home-office.png';
             font-size: 2rem;
           }
         }
+        p {
+          padding: 1rem 0 2rem 30px;
+        }
       }
       .principlesList {
-        margin: 0;
+        max-width: none;
       }
     }
   }

@@ -10,8 +10,7 @@
     align-items: center;
     justify-content: space-between;
     height: 20%;
-    padding: calc(var(--content-block-padding) - 0.5rem)
-      var(--content-block-padding);
+    padding: 1rem 2rem;
     background-color: var(--background-color-primary);
     .logo {
       height: 50px;
@@ -32,11 +31,12 @@
   }
   .mobileLinks {
     position: absolute;
+    background-color: white;
     z-index: 10;
     width: 100%;
     transform: translateY(-150%);
     transition: 0.5s;
-    padding: 1rem;
+    padding: 1.2rem;
     ul {
       display: flex;
       flex-direction: column;
@@ -53,8 +53,7 @@
 @media (min-width: 640px) {
   .header {
     .navigation {
-      padding: calc(var(--content-block-padding) - 0.5rem)
-        calc(var(--content-block-padding) * 2);
+      padding: 1.5rem 2rem;
       .desktopLinks {
         display: block;
       }
