@@ -1,13 +1,14 @@
 ---
 import ButtonLink from '../UI/ButtonLink.astro';
 import HorizontalLine from '../UI/HorizontalLine.astro';
-import Image from 'astro/components/Image.astro';
-import owner from '@/src/assets/img/owner-1.png';
-import ownerBg from '@/src/assets/img/home-owner-bg.png';
+import { Image } from 'astro:assets';
+import ownerImage from '@/src/assets/img/owner-1.png';
+import ownerImageBackground from '@/src/assets/img/home-owner-bg.png';
+import principlesList from '@/data/principlesList.json';
 ---
 
 <section class="principles">
-  <div class="heading">
+  <header>
     <div class="title">
       <h1>How we can help your</h1>
       <h2>BUSINESS</h2>
@@ -16,41 +17,24 @@ import ownerBg from '@/src/assets/img/home-owner-bg.png';
       We provide services of setting-up the HR departments for start-ups and
       scaling-up/developing businesses.
     </p>
-  </div>
+  </header>
   <HorizontalLine class="line" />
   <div class="imageContainer">
     <Image
-      src={owner}
+      src={ownerImage}
       alt="The owner of the website."
       class="ownerImg"
       quality={100}
     />
     <Image
-      src={ownerBg}
+      src={ownerImageBackground}
       alt="A grey background for the owner photo."
-      class="ownerBgImg"
+      class="ownerImgBg"
     />
   </div>
   <article class="principlesList">
     <ol>
-      <li>
-        We provide you with an on-demand access to our dedicated HR Professional
-        based in your real company&apos;s need, providing you with the
-        flexibility on scaling up or down with affordable monthly fee so you
-        don&apos;t have to maintain a full time resource.
-      </li>
-      <li>
-        We equip you with our comprehensive HR suite and give you full access to
-        our templates, forms & policies.
-      </li>
-      <li>
-        We take all the administrative burden away from you in terms of
-        compliance & legislation, recruitment, onboarding & employee management
-      </li>
-      <li>
-        We provide you with strategic support when you go through a rapid
-        scaling of your people capabilities
-      </li>
+      {principlesList.map((principle) => <li>{principle.text}</li>)}
     </ol>
     <ButtonLink text="Discover more" to="/offer" />
   </article>
@@ -61,7 +45,7 @@ import ownerBg from '@/src/assets/img/home-owner-bg.png';
     padding: var(--block-padding-mobile);
     max-width: 1200px;
     margin: 0 auto;
-    .heading {
+    header {
       max-width: 550px;
       min-width: 300px;
       margin: 0 auto;
@@ -90,7 +74,7 @@ import ownerBg from '@/src/assets/img/home-owner-bg.png';
         transform: translate(-50%, -50%);
         width: 90%;
       }
-      .ownerBgImg {
+      .ownerImgBg {
         z-index: 1;
       }
     }
@@ -137,7 +121,7 @@ import ownerBg from '@/src/assets/img/home-owner-bg.png';
       .line {
         width: 100%;
       }
-      .heading {
+      header {
         grid-column: 2;
         max-width: none;
         .title {

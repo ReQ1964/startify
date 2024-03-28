@@ -1,12 +1,12 @@
 ---
-import Image from 'astro/components/Image.astro';
+import { Image } from 'astro:assets';
 import homeOffice from '@/src/assets/img/home-office.png';
 import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
 ---
 
 <section class="introduction">
   <div class="upperContainer">
-    <div class="heading">
+    <header>
       <div>
         <h1>HR STARTIFY</h1>
         <h3>START YOUR HR PROPERLY</h3>
@@ -17,8 +17,8 @@ import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
         model. We give you safeguard peace of mind while you focus on your
         day-to-day business.
       </p>
-    </div>
-    <div class="officeBanner">
+    </header>
+    <div class="imageContainer">
       <Image
         src={homeOffice}
         alt="An office with a few chairs and a lookout on a city."
@@ -42,7 +42,7 @@ import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
     max-width: 1200px;
     margin: 0 auto;
     .upperContainer {
-      .heading {
+      header {
         display: flex;
         flex-direction: column;
         gap: var(--common-gap);
@@ -53,7 +53,7 @@ import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
         }
       }
 
-      .officeBanner {
+      .imageContainer {
         position: relative;
         max-width: 500px;
         margin: var(--content-blocks-margin) auto;
@@ -89,7 +89,7 @@ import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
         align-items: center;
         justify-content: center;
         gap: var(--common-gap);
-        .heading {
+        header {
           width: 50%;
           h1 {
             font-size: 2.4rem;
@@ -98,7 +98,7 @@ import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
             font-size: 1.8rem;
           }
         }
-        .officeBanner {
+        .imageContainer {
           width: 50%;
           margin: 0;
         }
@@ -113,7 +113,7 @@ import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
     .introduction {
       .upperContainer {
         gap: 6rem;
-        .heading {
+        header {
           gap: calc(var(--common-gap) + 2rem);
         }
       }
