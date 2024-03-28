@@ -1,7 +1,7 @@
 {
   "extends": ["astro/tsconfigs/strict", "astro/tsconfigs/base"],
   "compilerOptions": {
-    "baseUrl": "C:/Programowanie/startify",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["*"]
     },

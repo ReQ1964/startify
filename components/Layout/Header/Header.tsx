@@ -4,7 +4,7 @@ import logo from '@/src/assets/logo.png';
 import menuClose from '@/src/assets/icons/menuClose.svg';
 import menuOpen from '@/src/assets/icons/menuOpen.svg';
 
-const Header = ({ links }: { links: ReactNode }) => {
+const Header = ({ links }: { links?: ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const handleMenuState = () => {
