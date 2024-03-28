@@ -1,16 +1,72 @@
 ---
-// import { Image } from 'astro:assets';
-// import banner from '@/src/assets/img/home-about.png';
+import { Image } from 'astro:assets';
+import banner from '@/src/assets/img/home-about.png';
 ---
 
-<section class="about"></section>
-<h1 class="title">About <span>HR STARTIFY</span></h1>
-<div class="main"></div>
+<section class="about">
+  <h1>About <span>HR STARTIFY</span></h1>
+  <section>
+    <Image
+      src={banner}
+      alt="Two people talking and working on two laptops."
+      quality={100}
+    />
+    <div>
+      <h4>WELCOME TO STARTIFY</h4>
+      <p>
+        Your Partner of passionate people & culture professionals who design
+        powerful human resources experience for you.
+      </p>
+      <p>
+        We work with small-medium organizations who want to get the people piece
+        right.
+      </p>
+    </div>
+  </section>
+</section>
 <style lang="scss">
   .about {
-    .title {
-      span {
+    padding: var(--block-padding-mobile);
+    max-width: 1200px;
+    margin: 0 auto;
+    h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    span {
+      color: var(--text-color-secondary);
+    }
+    section {
+      display: grid;
+      gap: var(--common-gap);
+      img {
+        border-radius: 1.25rem;
+      }
+      h4 {
         color: var(--text-color-secondary);
+      }
+      p:nth-of-type(2) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .about {
+      padding: var(--block-padding-desktop);
+      h1 {
+        font-size: var(--h1-size);
+        margin-bottom: 4rem;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        div {
+          place-self: center;
+          h4 {
+            margin-bottom: 1rem;
+          }
+        }
       }
     }
   }
