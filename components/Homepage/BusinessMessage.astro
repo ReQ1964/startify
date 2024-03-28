@@ -1,0 +1,19 @@
+---
+import ButtonLink from '../UI/ButtonLink.astro';
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+---
+
+<UniversalWrapper class="businessMessage">
+  <h2>Your buisiness will thrive when you put your people first.</h2>
+  <ButtonLink text="Read more" to="/about" />
+</UniversalWrapper>
+
+<style lang="scss">
+  .businessMessage {
+    text-align: center;
+    h2 {
+      color: var(--text-color-secondary);
+      margin-bottom: 2rem;
+    }
+  }
+</style>

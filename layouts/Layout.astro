@@ -35,10 +35,12 @@ const {
   </head>
 
   <body>
-    <Header client:only="react">
-      <NavigationLinks slot="links" />
-    </Header>
-    <slot />
-    <Footer />
+    <main>
+      <Header client:only="react">
+        <NavigationLinks slot="links" />
+      </Header>
+      <slot />
+      <Footer />
+    </main>
   </body>
 </html>

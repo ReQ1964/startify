@@ -1,0 +1,20 @@
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<section class={className} {...rest}>
+  <slot />
+</section>
+
+<style lang="scss">
+  section {
+    padding: var(--block-padding-mobile);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    section {
+      padding: var(--block-padding-desktop);
+    }
+  }
+</style>
