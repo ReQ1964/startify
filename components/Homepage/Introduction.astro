@@ -1,0 +1,122 @@
+---
+import Image from 'astro/components/Image.astro';
+import homeOffice from '@/src/assets/img/home-office.png';
+import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
+---
+
+<section class="introduction">
+  <div class="upperContainer">
+    <div class="heading">
+      <div>
+        <h1>HR STARTIFY</h1>
+        <h3>START YOUR HR PROPERLY</h3>
+      </div>
+      <p class="description">
+        Our mission is simple: to provide you with a comprehensive HR expertise
+        & top-notch solutions exactly when you need it in a pay-as-you service
+        model. We give you safeguard peace of mind while you focus on your
+        day-to-day business.
+      </p>
+    </div>
+    <div class="officeBanner">
+      <Image
+        src={homeOffice}
+        alt="An office with a few chairs and a lookout on a city."
+        class="officeImage"
+      />
+      <Image
+        src={homeOfficeBg}
+        alt="A grey background for the office photo."
+        class="officeBackgroundImage"
+      />
+    </div>
+  </div>
+  <p class="catchphrase">
+    <span>EMPOWER</span> your business with strategic HR for growth and success.
+  </p>
+</section>
+
+<style lang="scss">
+  .introduction {
+    padding: 0.5rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    .upperContainer {
+      .heading {
+        display: flex;
+        flex-direction: column;
+        gap: var(--common-gap);
+        min-width: 300px;
+        h1 {
+          color: var(--text-color-secondary);
+          font-size: 1.7rem;
+        }
+      }
+
+      .officeBanner {
+        position: relative;
+        max-width: 500px;
+        margin: var(--content-blocks-margin) auto;
+        .officeImage {
+          position: absolute;
+          z-index: 3;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 92%;
+        }
+        .officeBackgroundImage {
+          z-index: 1;
+        }
+      }
+    }
+
+    .catchphrase {
+      text-align: center;
+      margin-top: calc(var(--content-blocks-margin) + 1rem);
+      span {
+        color: var(--text-color-secondary);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .introduction {
+      padding: var(--block-padding-desktop);
+      .upperContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: var(--common-gap);
+        .heading {
+          width: 50%;
+          h1 {
+            font-size: 2.4rem;
+          }
+          h3 {
+            font-size: 1.8rem;
+          }
+        }
+        .officeBanner {
+          width: 50%;
+          margin: 0;
+        }
+      }
+      .catchphrase {
+        margin: 8rem 0 4rem;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .introduction {
+      .upperContainer {
+        gap: 6rem;
+        .heading {
+          gap: calc(var(--common-gap) + 2rem);
+        }
+      }
+    }
+  }
+</style>

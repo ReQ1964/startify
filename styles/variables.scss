@@ -4,8 +4,14 @@
 
   --background-color-primary: white;
 
-  --content-block-padding: 2rem;
+  /* For blocks that include a few divs */
+  --block-padding-mobile: 3rem 1.5rem;
+  --block-padding-desktop: 1.5rem 3rem;
 
+  /* For space between content blocks */
+  --content-blocks-margin: 3rem;
+
+  /* For gap between items / small containers */
   --common-gap: 2rem;
 
   // sm: '640px';

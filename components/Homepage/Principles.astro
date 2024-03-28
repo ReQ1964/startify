@@ -1,0 +1,161 @@
+---
+import ButtonLink from '../UI/ButtonLink.astro';
+import HorizontalLine from '../UI/HorizontalLine.astro';
+import Image from 'astro/components/Image.astro';
+import owner from '@/src/assets/img/owner-1.png';
+import ownerBg from '@/src/assets/img/home-owner-bg.png';
+---
+
+<section class="principles">
+  <div class="heading">
+    <div class="title">
+      <h1>How we can help your</h1>
+      <h2>BUSINESS</h2>
+    </div>
+    <p>
+      We provide services of setting-up the HR departments for start-ups and
+      scaling-up/developing businesses.
+    </p>
+  </div>
+  <HorizontalLine class="line" />
+  <div class="imageContainer">
+    <Image
+      src={owner}
+      alt="The owner of the website."
+      class="ownerImg"
+      quality={100}
+    />
+    <Image
+      src={ownerBg}
+      alt="A grey background for the owner photo."
+      class="ownerBgImg"
+    />
+  </div>
+  <article class="principlesList">
+    <ol>
+      <li>
+        We provide you with an on-demand access to our dedicated HR Professional
+        based in your real company&apos;s need, providing you with the
+        flexibility on scaling up or down with affordable monthly fee so you
+        don&apos;t have to maintain a full time resource.
+      </li>
+      <li>
+        We equip you with our comprehensive HR suite and give you full access to
+        our templates, forms & policies.
+      </li>
+      <li>
+        We take all the administrative burden away from you in terms of
+        compliance & legislation, recruitment, onboarding & employee management
+      </li>
+      <li>
+        We provide you with strategic support when you go through a rapid
+        scaling of your people capabilities
+      </li>
+    </ol>
+    <ButtonLink text="Discover more" to="/offer" />
+  </article>
+</section>
+
+<style lang="scss">
+  .principles {
+    padding: var(--block-padding-mobile);
+    max-width: 1200px;
+    margin: 0 auto;
+    .heading {
+      max-width: 550px;
+      min-width: 300px;
+      margin: 0 auto;
+      .title {
+        max-width: 400px;
+        margin: 0 auto;
+        h2 {
+          color: var(--text-color-secondary);
+          text-align: right;
+          font-size: 1.7rem;
+        }
+      }
+      p {
+        padding: 1rem 0 3rem;
+      }
+    }
+    .imageContainer {
+      max-width: 300px;
+      position: relative;
+      margin: var(--content-blocks-margin) auto 0;
+      .ownerImg {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+      }
+      .ownerBgImg {
+        z-index: 1;
+      }
+    }
+
+    .principlesList {
+      max-width: 500px;
+      margin: 2rem auto;
+      ol {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: var(--content-blocks-margin);
+        li {
+          &::before {
+            color: var(--text-color-secondary);
+            content: '0' counter(list) '.';
+            left: -1px;
+            position: absolute;
+            text-align: right;
+            width: 26px;
+          }
+          width: 95%;
+          counter-increment: list;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 960px) {
+    .principles {
+      padding: var(--block-padding-desktop);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      column-gap: 3rem;
+      .imageContainer {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        place-self: center;
+        max-width: none;
+        margin: 0 auto;
+      }
+      .line {
+        width: 100%;
+      }
+      .heading {
+        grid-column: 2;
+        max-width: none;
+        .title {
+          max-width: 450px;
+          h1 {
+            font-size: 1.8rem;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+        }
+        p {
+          padding: 1rem 0 2rem 30px;
+        }
+      }
+      .principlesList {
+        max-width: none;
+      }
+    }
+  }
+</style>
