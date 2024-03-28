@@ -5,9 +5,10 @@ import { Image } from 'astro:assets';
 import ownerImage from '@/src/assets/img/owner-1.png';
 import ownerImageBackground from '@/src/assets/img/home-owner-bg.png';
 import principlesList from '@/data/principlesList.json';
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
-<section class="principles">
+<UniversalWrapper class="principles">
   <header>
     <div class="title">
       <h1>How we can help your</h1>
@@ -38,76 +39,70 @@ import principlesList from '@/data/principlesList.json';
     </ol>
     <ButtonLink text="Discover more" to="/offer" />
   </article>
-</section>
+</UniversalWrapper>
 
 <style lang="scss">
-  .principles {
-    padding: var(--block-padding-mobile);
-    max-width: 1200px;
+  header {
+    max-width: 550px;
+    min-width: 300px;
     margin: 0 auto;
-    header {
-      max-width: 550px;
-      min-width: 300px;
+    .title {
+      max-width: 400px;
       margin: 0 auto;
-      .title {
-        max-width: 400px;
-        margin: 0 auto;
-        h2 {
-          color: var(--text-color-secondary);
-          text-align: right;
-          font-size: 1.7rem;
-        }
-      }
-      p {
-        padding: 1rem 0 3rem;
+      h2 {
+        color: var(--text-color-secondary);
+        text-align: right;
+        font-size: 1.7rem;
       }
     }
-    .imageContainer {
-      max-width: 300px;
-      position: relative;
-      margin: var(--content-blocks-margin) auto 0;
-      .ownerImg {
-        position: absolute;
-        z-index: 3;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-      }
-      .ownerImgBg {
-        z-index: 1;
-      }
+    p {
+      padding: 1rem 0 3rem;
     }
+  }
+  .imageContainer {
+    max-width: 300px;
+    position: relative;
+    margin: var(--content-blocks-margin) auto 0;
+    .ownerImg {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+    }
+    .ownerImgBg {
+      z-index: 1;
+    }
+  }
 
-    .principlesList {
-      max-width: 500px;
-      margin: 2rem auto 0;
-      ol {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-bottom: var(--content-blocks-margin);
-        li {
-          &::before {
-            color: var(--text-color-secondary);
-            content: '0' counter(list) '.';
-            left: -1px;
-            position: absolute;
-            text-align: right;
-            width: 26px;
-          }
-          width: 95%;
-          counter-increment: list;
-          margin-left: 30px;
+  .principlesList {
+    max-width: 500px;
+    margin: 2rem auto 0;
+    ol {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: var(--content-blocks-margin);
+      li {
+        &::before {
+          color: var(--text-color-secondary);
+          content: '0' counter(list) '.';
+          left: -1px;
+          position: absolute;
+          text-align: right;
+          width: 26px;
         }
+        width: 95%;
+        counter-increment: list;
+        margin-left: 30px;
       }
     }
   }
 
   @media (min-width: 960px) {
     .principles {
-      padding: var(--block-padding-desktop);
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       column-gap: 3rem;

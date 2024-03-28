@@ -1,11 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import banner from '@/src/assets/img/home-about.png';
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
-<section class="about">
+<UniversalWrapper>
   <h1>About <span>HR STARTIFY</span></h1>
-  <section>
+  <section class="content">
     <Image
       src={banner}
       alt="Two people talking and working on two laptops."
@@ -23,49 +24,40 @@ import banner from '@/src/assets/img/home-about.png';
       </p>
     </div>
   </section>
-</section>
+</UniversalWrapper>
 <style lang="scss">
-  .about {
-    padding: var(--block-padding-mobile);
-    max-width: 1200px;
-    margin: 0 auto;
-    h1 {
-      margin-bottom: 1rem;
-      text-align: center;
+  h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  span {
+    color: var(--text-color-secondary);
+  }
+  .content {
+    display: grid;
+    gap: var(--common-gap);
+    img {
+      border-radius: 1.25rem;
     }
-    span {
+    h4 {
       color: var(--text-color-secondary);
     }
-    section {
-      display: grid;
-      gap: var(--common-gap);
-      img {
-        border-radius: 1.25rem;
-      }
-      h4 {
-        color: var(--text-color-secondary);
-      }
-      p:nth-of-type(2) {
-        margin-top: 2rem;
-      }
+    p:nth-of-type(2) {
+      margin-top: 2rem;
     }
   }
 
   @media (min-width: 768px) {
-    .about {
-      padding: var(--block-padding-desktop);
-      h1 {
-        font-size: var(--h1-size);
-        margin-bottom: 4rem;
-      }
-      section {
-        display: grid;
-        grid-template-columns: 1.7fr 1fr;
-        div {
-          place-self: center;
-          h4 {
-            margin-bottom: 1rem;
-          }
+    h1 {
+      font-size: var(--h1-size);
+      margin-bottom: 4rem;
+    }
+    .content {
+      grid-template-columns: 1.7fr 1fr;
+      div {
+        place-self: center;
+        h4 {
+          margin-bottom: 1rem;
         }
       }
     }
