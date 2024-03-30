@@ -1,0 +1,43 @@
+---
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+---
+
+<UniversalWrapper>
+  <h1>How do we work?</h1>
+
+  <section class="description">
+    <p>
+      Think of us as your comprehensive HR department, adaptable to your
+      business's demands. We present three primary subscription packages,
+      allowing you to choose the one best suited to your requirements.
+      Furthermore, you have the flexibility to modify your monthly subscription
+      according to your company's evolving needs, granting you the freedom to
+      scale your services up or down as necessary.
+    </p>
+    <p class="highlight">
+      We take the time to get to know you and your business while we review and
+      improve every part of the employee life-cycle, in collaboration with your
+      team.
+    </p>
+  </section>
+</UniversalWrapper>
+
+<style lang="scss">
+  h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .description {
+    display: grid;
+    gap: 3rem;
+    .highlight {
+      color: var(--text-color-secondary);
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: var(--h1-size);
+    }
+  }
+</style>
