@@ -5,10 +5,16 @@ import aboutBanner from '@/src/assets/img/about/about-banner.png';
 import TopBanner from '@/components/Common/TopBanner.astro';
 import SolutionsSuite from '@/components/About/SolutionsSuite.astro';
 import WorkMethods from '@/components/About/WorkMethods.astro';
+import WorkBanner from '@/components/About/WorkBanner.astro';
 ---
 
 <Layout>
-  <TopBanner src={aboutBanner} alt="text" text="ABOUT US" />
+  <TopBanner
+    src={aboutBanner}
+    alt="An image of a business meeting, in the middle there is a heading and an arrow pointing downwards."
+    text="ABOUT US"
+  />
   <SolutionsSuite />
   <WorkMethods />
+  <WorkBanner />
 </Layout>
