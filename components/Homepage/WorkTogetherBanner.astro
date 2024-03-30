@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import banner from '@/src/assets/img/home-work-together.png';
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+---
+
+<UniversalWrapper>
+  <section class="content">
+    <Image
+      src={banner}
+      alt="Two people talking and working on two laptops."
+      quality={100}
+    />
+    <div>
+      <h2>LET&apos;S WORK TOGETHER!</h2>
+      <p>Contact us today and see how we can help.</p>
+    </div>
+  </section>
+</UniversalWrapper>
+<style lang="scss">
+  .content {
+    display: grid;
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    gap: var(--common-gap);
+    img {
+      border-radius: 1.25rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      grid-template-columns: 1fr 1fr;
+      div {
+        place-self: center;
+        h4 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+</style>
