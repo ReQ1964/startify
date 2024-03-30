@@ -7,8 +7,14 @@ const { class: className, ...rest } = Astro.props;
   {...rest}
   name="contact"
   method="POST"
+  netlify-honeypot="bot-field"
   data-netlify="true"
 >
+  <p class="hidden">
+    <label>
+      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+    </label>
+  </p>
   <section class="personalDetails">
     <div>
       <p>
@@ -43,7 +49,40 @@ const { class: className, ...rest } = Astro.props;
   <button type="submit">Send</button>
 </form>
 
+<script>
+  const handleSubmit = (event: Event) => {
+    event.preventDefault();
+
+    const myForm = event.target as HTMLFormElement;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      //@ts-ignore
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        alert(
+          "Thank you for your submission, we'll get back to you as soon as possible!",
+        );
+        form.reset();
+      })
+      .catch((error) => alert(error));
+  };
+
+  const form = document.querySelector('form') as HTMLFormElement;
+  if (form) {
+    form.addEventListener('submit', handleSubmit);
+  } else {
+    console.error('Form not found');
+  }
+</script>
+
 <style lang="scss">
+  .hidden {
+    display: none;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -77,6 +116,7 @@ const { class: className, ...rest } = Astro.props;
         resize: none;
         border: none;
         border-radius: 1.5rem;
+        padding: 0.7rem;
       }
     }
     button {
