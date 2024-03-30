@@ -1,0 +1,64 @@
+---
+import Image from 'astro/components/Image.astro';
+import arrowDown from '@/src/assets/icons/arrowDown.svg';
+const { src, alt, text } = Astro.props;
+---
+
+<section class="banner">
+  <Image src={src} alt={alt} class="bannerImage" quality={100} />
+  <h1 class="title">{text}</h1>
+  <Image src={arrowDown} alt="An arrow pointing down." class="arrow" />
+</section>
+
+<style lang="scss">
+  .banner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    .title {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text-color-tertiary);
+      font-size: var(--h1-size);
+    }
+    .arrow {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+    }
+    .bannerImage {
+      width: 100%;
+      filter: brightness(85%);
+      border-radius: 1.5rem;
+    }
+  }
+  @media (min-width: 640px) {
+    .banner {
+      .title {
+        top: 45%;
+        font-size: 2rem;
+      }
+      .arrow {
+        top: 60%;
+        width: 35px;
+      }
+    }
+  }
+  @media (min-width: 960px) {
+    .banner {
+      .title {
+        top: 53%;
+        font-size: 2.2rem;
+      }
+      .arrow {
+        top: 65%;
+        width: 35px;
+      }
+    }
+  }
+</style>
