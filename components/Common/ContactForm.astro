@@ -80,9 +80,6 @@ const { class: className, ...rest } = Astro.props;
 </script>
 
 <style lang="scss">
-  .hidden {
-    display: none;
-  }
   form {
     display: flex;
     flex-direction: column;
@@ -94,6 +91,9 @@ const { class: className, ...rest } = Astro.props;
     border-radius: 1.5rem;
     padding: 1rem;
     margin: 0 auto;
+    .hidden {
+      display: none;
+    }
     .personalDetails {
       display: grid;
       gap: 2rem;

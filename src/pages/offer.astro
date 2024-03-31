@@ -1,0 +1,15 @@
+---
+import '@/styles/global.scss';
+import Layout from '@/layouts/Layout.astro';
+import offerBanner from '@/src/assets/img/offer/offer-banner.png';
+import TopBanner from '@/components/Common/TopBanner.astro';
+---
+
+<Layout>
+  <TopBanner
+    src={offerBanner}
+    alt="Five hands interchangeably placed opposite each other on a wooden table, in the middle there is a heading and an arrow pointing downwards."
+    text="OUR OFFER"
+    quality={80}
+  />
+</Layout>

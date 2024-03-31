@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import homeOffice from '@/src/assets/img/home-office.png';
-import homeOfficeBg from '@/src/assets/img/home-photos-bg.png';
+import homeOffice from '@/src/assets/img/home/home-office.png';
+import homeOfficeBg from '@/src/assets/img/home/home-photos-bg.png';
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
@@ -24,7 +24,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
         src={homeOffice}
         alt="An office with a few chairs and a lookout on a city."
         class="officeImage"
-        quality={100}
+        quality={80}
       />
       <Image
         src={homeOfficeBg}
@@ -88,7 +88,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
           font-size: 2.4rem;
         }
         h3 {
-          font-size: 1.8rem;
+          font-size: 2rem;
         }
       }
       .imageContainer {

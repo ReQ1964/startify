@@ -2,8 +2,8 @@
 import ButtonLink from '../Common/ButtonLink.astro';
 import HorizontalLine from '../Common/HorizontalLine.astro';
 import { Image } from 'astro:assets';
-import ownerImage from '@/src/assets/img/owner-1.png';
-import ownerImageBackground from '@/src/assets/img/home-owner-bg.png';
+import ownerImage from '@/src/assets/img/home/home-owner.png';
+import ownerImageBackground from '@/src/assets/img/home/home-owner-bg.png';
 import principlesList from '@/data/principlesList.json';
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
@@ -25,7 +25,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
       src={ownerImage}
       alt="The owner of the website."
       class="ownerImg"
-      quality={100}
+      quality={80}
     />
     <Image
       src={ownerImageBackground}
@@ -121,9 +121,6 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
         max-width: none;
         .title {
           max-width: 450px;
-          h1 {
-            font-size: 1.8rem;
-          }
           h2 {
             font-size: 2rem;
           }

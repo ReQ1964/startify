@@ -1,0 +1,55 @@
+---
+import prosList from '@/data/prosList.json';
+import arrowRight from '@/src/assets/icons/arrowRightBlue.svg';
+import { Image } from 'astro:assets';
+---
+
+<section>
+  <ul>
+    <h1>What makes HR Startify different?</h1>
+    {
+      prosList.map((pro) => (
+        <li>
+          <Image
+            src={arrowRight}
+            alt="A blue arrow pointing right, towards the text."
+          />
+          {pro.text}
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style lang="scss">
+  section {
+    margin: 4rem 0 2rem;
+    ul {
+      display: grid;
+      gap: 3rem;
+      background-color: var(--background-color-tertiary);
+      padding: var(--block-padding-mobile);
+      h1 {
+        color: var(--text-color-secondary);
+        text-align: center;
+      }
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: clamp(200px, 100%, 900px);
+        margin: 0 auto;
+        gap: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    section {
+      margin: 6rem 0 3.5rem;
+      ul {
+        padding: var(--block-padding-desktop);
+      }
+    }
+  }
+</style>

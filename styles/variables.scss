@@ -1,15 +1,17 @@
 :root {
   --text-color-primary: black;
   --text-color-secondary: #02577b;
+  --text-color-tertiary: white;
 
   --background-color-primary: white;
   --background-color-secondary: rgba(196, 187, 180, 32%);
+  --background-color-tertiary: #f5f5f5;
 
   --h1-size: 1.8rem;
 
   /* For blocks that include a few divs */
   --block-padding-mobile: 2rem 1.5rem;
-  --block-padding-desktop: 3rem;
+  --block-padding-desktop: 3.5rem 3rem;
 
   /* For space between content blocks */
   --content-blocks-margin: 3rem;

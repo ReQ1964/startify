@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import banner from '@/src/assets/img/home-about.png';
+import banner from '@/src/assets/img/home/home-about.png';
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
@@ -13,7 +13,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
       quality={100}
     />
     <div>
-      <h4>WELCOME TO STARTIFY</h4>
+      <h3>WELCOME TO STARTIFY</h3>
       <p>
         Your Partner of passionate people & culture professionals who design
         powerful human resources experience for you.
@@ -39,7 +39,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     img {
       border-radius: 1.25rem;
     }
-    h4 {
+    h3 {
       color: var(--text-color-secondary);
     }
     p:nth-of-type(2) {
@@ -56,7 +56,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
       grid-template-columns: 1.7fr 1fr;
       div {
         place-self: center;
-        h4 {
+        h3 {
           margin-bottom: 1rem;
         }
       }

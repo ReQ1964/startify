@@ -1,0 +1,72 @@
+---
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+import { Image } from 'astro:assets';
+import founderPicture from '@/src/assets/img/about/about-founder.png';
+import ButtonLink from '../Common/ButtonLink.astro';
+---
+
+<UniversalWrapper class="founderInfo">
+  <header>
+    <h1>Founder:</h1>
+    <h2>Kasia Kowalska - Banka</h2>
+  </header>
+  <div class="imageContainer">
+    <Image
+      src={founderPicture}
+      alt="Picture of the website's founder"
+      quality={100}
+    />
+  </div>
+  <section>
+    <p>
+      Dynamic Solutions-driven leader with a proven record of managing complex
+      programs across varied global geographies. Brooad international experience
+      in Human Resource Management, Talent Acquisition, People Data Analytics,
+      HR Consulting, Contigent workforce Solutions & Total Talent Solutions.
+      Passionate about business transformation and strategic leadership.
+      Experienced in working across Asia Pacific and Europe.
+    </p>
+    <p>
+      Skilled in building multi-country cross-functional teams, delivering high
+      quality service supporting operations, implementing people &
+      culture-related solutions, compliance and risk mitigation, talent
+      acquisition, policy development and strategies implementation in varied
+      regions.
+    </p>
+    <ButtonLink text="See our offer" to="/offer" />
+  </section>
+</UniversalWrapper>
+
+<style lang="scss">
+  .founderInfo {
+    display: grid;
+    gap: var(--common-gap);
+    header {
+      display: grid;
+      gap: 1rem;
+    }
+    .imageContainer {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--common-gap);
+    }
+  }
+  @media (min-width: 960px) {
+    .founderInfo {
+      grid-template-columns: 1fr 1.6fr;
+      column-gap: 3rem;
+      header {
+        grid-column: 2;
+      }
+      .imageContainer {
+        grid-row: 1 / 3;
+        grid-column: 1;
+      }
+    }
+  }
+</style>
