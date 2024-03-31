@@ -45,3 +45,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--h1-size);
+  }
+}
