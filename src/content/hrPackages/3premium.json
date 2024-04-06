@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "title": "HR Business Partner (Premium Package)",
+  "image": "./images/premiumPackageBanner.png",
+  "imageAlt": "A top-down view of a desk with books, glasses, coffee and person's hands taking notes",
+  "description": "This option is great for small & medium businesses or teams who need HR support regularly on a variety of topics, usually for organizations or teams between 10 - 50 people.Use this subscription to get an interim HR Consultant available for your business who can be relied upon by your team. You will have access to meaningful HR solutions, template development, meetings, recruitment and access to full Startify HR documents suite. The HR Business Partner package is a great solution for busy people-oriented companies who need an experienced and hands-on HR professional involved regularly. This subscription is great to keep you on top of operational HR and chip away at larger projects.",
+  "features": [
+    "Recruitment, Talent Acquisition",
+    "Recruitment Toolkit exclusively designed for your organization",
+    "Sourcing Strategy Implementation",
+    "EVP & Employer Branding Strategy",
+    "Talent Management",
+    "Performance Management",
+    "Employee Engagement",
+    "Training and Development",
+    "HR Compliance & Legislation",
+    "Talent Maturity Framework",
+    "Design of Incentive Program",
+    "Access to full suite of quality HR templates & procedures",
+    "Monthly check-ins"
+  ],
+  "duration": "20 hours a month"
+}

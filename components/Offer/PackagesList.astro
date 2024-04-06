@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+const allHrPackages = await getCollection('hrPackages');
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+import PackageComponent from './PackageComponent.astro';
+
+type hrPackageType = CollectionEntry<'hrPackages'>;
+---
+
+<UniversalWrapper class="packagesList">
+  {
+    allHrPackages.map((hrPackage: hrPackageType) => (
+      <PackageComponent
+        hrPackage={hrPackage}
+        inverted={hrPackage.data.id % 2 === 0 ? 'inverted' : ''}
+      />
+    ))
+  }
+</UniversalWrapper>
+
+<style lang="scss">
+  .packagesList {
+    display: grid;
+    gap: 8rem;
+    max-width: 1100px;
+  }
+</style>
