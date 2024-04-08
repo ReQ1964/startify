@@ -1,0 +1,10 @@
+---
+const { summary } = Astro.props;
+---
+
+<article>
+  <h1>{summary.data.title}</h1>
+  <p>{summary.data.details}</p>
+  <p>{summary.data.teamSize}</p>
+  <button>GET STARTED</button>
+</article>

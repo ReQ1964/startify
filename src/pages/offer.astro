@@ -3,7 +3,8 @@ import '@/styles/global.scss';
 import Layout from '@/layouts/Layout.astro';
 import offerBanner from '@/src/assets/img/offer/offer-banner.png';
 import TopBanner from '@/components/Common/TopBanner.astro';
-import PackagesList from '@/components/Offer/PackagesList.astro';
+import PackagesList from '@/components/Offer/Packages/PackagesList.astro';
+import SummariesList from '@/components/Offer/PackagesSummaries/SummariesList.astro';
 ---
 
 <Layout>
@@ -14,4 +15,5 @@ import PackagesList from '@/components/Offer/PackagesList.astro';
     quality={80}
   />
   <PackagesList />
+  <SummariesList />
 </Layout>

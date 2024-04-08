@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 const allHrPackages = await getCollection('hrPackages');
-import UniversalWrapper from '../Layout/UniversalWrapper.astro';
-import PackageComponent from './PackageComponent.astro';
+import UniversalWrapper from '../../Layout/UniversalWrapper.astro';
+import PackageComponent from '../Packages/PackageComponent.astro';
 
 type hrPackageType = CollectionEntry<'hrPackages'>;
 ---

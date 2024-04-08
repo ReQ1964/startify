@@ -1,0 +1,13 @@
+---
+import UniversalWrapper from '@/components/Layout/UniversalWrapper.astro';
+import Summary from './Summary.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const allSummaries = await getCollection('packagesSummaries');
+type summaryType = CollectionEntry<'packagesSummaries'>;
+---
+
+<UniversalWrapper>
+  {allSummaries.map((summary: summaryType) => <Summary summary={summary} />)}
+</UniversalWrapper>

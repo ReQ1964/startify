@@ -15,6 +15,16 @@ const packagesCollection = defineCollection({
     }),
 });
 
+const summariesCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    details: z.string(),
+    teamSize: z.string(),
+  }),
+});
+
 export const collections = {
   hrPackages: packagesCollection,
+  packagesSummaries: summariesCollection,
 };
