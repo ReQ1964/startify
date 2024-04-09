@@ -8,6 +8,8 @@ import SummariesList from '@/components/Offer/PackagesSummaries/SummariesList.as
 import Image from 'astro/components/Image.astro';
 import grayStripe from '@/src/assets/img/offer/gray-stripe.png';
 import SubscriptionTargetAudience from '@/components/Offer/SubscriptionTargetAudience.astro';
+import ContactBanner from '@/components/Offer/ContactBanner.astro';
+import ClientCapParagraph from '@/components/Offer/ClientCapParagraph.astro';
 ---
 
 <Layout>
@@ -25,4 +27,6 @@ import SubscriptionTargetAudience from '@/components/Offer/SubscriptionTargetAud
     style={{ width: '100%', height: '10vh' }}
   />
   <SubscriptionTargetAudience />
+  <ClientCapParagraph />
+  <ContactBanner />
 </Layout>
