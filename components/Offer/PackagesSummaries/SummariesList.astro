@@ -8,6 +8,14 @@ const allSummaries = await getCollection('packagesSummaries');
 type summaryType = CollectionEntry<'packagesSummaries'>;
 ---
 
-<UniversalWrapper>
+<UniversalWrapper class="summariesList">
   {allSummaries.map((summary: summaryType) => <Summary summary={summary} />)}
 </UniversalWrapper>
+
+<style lang="scss">
+  .summariesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--content-blocks-margin);
+  }
+</style>
