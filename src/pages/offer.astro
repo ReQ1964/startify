@@ -5,6 +5,9 @@ import offerBanner from '@/src/assets/img/offer/offer-banner.png';
 import TopBanner from '@/components/Common/TopBanner.astro';
 import PackagesList from '@/components/Offer/Packages/PackagesList.astro';
 import SummariesList from '@/components/Offer/PackagesSummaries/SummariesList.astro';
+import Image from 'astro/components/Image.astro';
+import grayStripe from '@/src/assets/img/offer/gray-stripe.png';
+import SubscriptionTargetAudience from '@/components/Offer/SubscriptionTargetAudience.astro';
 ---
 
 <Layout>
@@ -16,4 +19,10 @@ import SummariesList from '@/components/Offer/PackagesSummaries/SummariesList.as
   />
   <PackagesList />
   <SummariesList />
+  <Image
+    src={grayStripe}
+    alt="A gray, marbled stripe, dividing two logically separate site sections."
+    style={{ width: '100%', height: '10vh' }}
+  />
+  <SubscriptionTargetAudience />
 </Layout>

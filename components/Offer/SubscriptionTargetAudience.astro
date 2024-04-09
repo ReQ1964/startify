@@ -1,0 +1,57 @@
+---
+import Image from 'astro/components/Image.astro';
+import targetAudienceList from '@/data/targetAudienceList.json';
+import targetAudienceBanner from '@/src/assets/img/offer/offer-target-audience.png';
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+---
+
+<UniversalWrapper>
+  <h1>Our Startify subscription packages will suit you if:</h1>
+  <article>
+    <Image
+      src={targetAudienceBanner}
+      alt="A top-down view on a person working on a laptop."
+    />
+    <ul>
+      {targetAudienceList.map((item) => <li>{item.text}</li>)}
+    </ul>
+  </article>
+</UniversalWrapper>
+
+<style lang="scss">
+  h1 {
+    color: var(--text-color-secondary);
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  article {
+    display: grid;
+    img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    ul {
+      display: grid;
+      gap: 2rem;
+      background-color: #f5f5f5;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      li {
+        list-style: disc;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    article {
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2rem;
+      img {
+        height: 100%;
+        margin-bottom: 0;
+      }
+    }
+  }
+</style>
