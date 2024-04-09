@@ -1,0 +1,45 @@
+---
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+import ButtonLink from '../Common/ButtonLink.astro';
+import banner from '@/src/assets/img/offer/offer-contact-banner.png';
+import bannerBackground from '@/src/assets/img/offer/offer-contact-background.png';
+import Image from 'astro/components/Image.astro';
+---
+
+<UniversalWrapper class="contactSection">
+  <div class="imgContainer">
+    <Image
+      src={banner}
+      alt="Two people working together"
+      class="banner"
+      quality={100}
+    />
+    <Image
+      src={bannerBackground}
+      alt="A background for the banner"
+      class="bannerBackground"
+      quality={100}
+    />
+  </div>
+  <ButtonLink text="CONTACT US" to="/contact" />
+</UniversalWrapper>
+
+<style lang="scss">
+  .contactSection {
+    display: grid;
+    gap: clamp(2rem, 10vh, 7rem);
+    .imgContainer {
+      position: relative;
+      img {
+        border-radius: 1.5rem;
+      }
+      .banner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 90%;
+      }
+    }
+  }
+</style>

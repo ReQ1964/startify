@@ -1,0 +1,37 @@
+{
+  "id": 1,
+  "title": "HR On-Demand (Basic Package)",
+  "image": "./images/basicPackageBanner.png",
+  "imageAlt": "A top-down view of a desk with books, glasses, coffee and person's hands taking notes",
+  "description": "Perfect for the small businesses or departments who have under 10 staff. This package will give you the ability to meet & call a dedicated HR Consultant at any time and get specific advice on any HR-related matter. Use this subscription for ad-hoc HR advice or monthly HR check-in meetings to keep your people plan on track. This package includes review & updates on HR policies, employment rules and regulations.",
+  "features": [
+    "Dedicated HR Professional",
+    "Design of Policies & Procedures",
+    "Talent Acquisition/ Recruitment",
+    {
+      "Comprehensive HR Coverage": [
+        "Review of Performance",
+        "Design of Incentive Programs",
+        "Employee benefits review",
+        "Jobs review/creation/ grading",
+        "Salary review & benchmarking"
+      ]
+    },
+    {
+      "Administrative HR Coverage": [
+        "Contracts Management",
+        "Employee Onboarding/ Offboarding",
+        "Employee Record Management",
+        "Time and Attendance tracking",
+        "Exit Management",
+        "Design of HR Forms"
+      ]
+    },
+    "Compensation & Benefits Administration"
+  ],
+  "optionalModules": [
+    "HR Software Implementation",
+    "Employee Handbook Creation"
+  ],
+  "duration": "10 hours a month"
+}
