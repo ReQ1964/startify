@@ -11,8 +11,8 @@ interface LayoutProps {
 
 const {
   title = 'Startify',
-  description = 'A HR website landing page',
-  image = "Let's find a suitable package for you ",
+  description = 'A Human Resources page, where you can find a package that suits your company.',
+  image = "Let's find a suitable package for you.",
 }: LayoutProps = Astro.props;
 ---
 
@@ -21,7 +21,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="TBA" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#134e4a" />

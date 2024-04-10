@@ -11,11 +11,12 @@ import banner from '@/src/assets/img/home/home-work-together.png';
       src={banner}
       alt="Two people talking and working on two laptops."
       quality={80}
+      loading="eager"
     />
-    <div>
-      <h2>LET&apos;S WORK TOGETHER!</h2>
+    <header>
+      <h1>LET&apos;S WORK TOGETHER!</h1>
       <p>Contact us today and see how we can help.</p>
-    </div>
+    </header>
     <ContactForm class="contactForm" />
   </section>
 </UniversalWrapper>
@@ -26,8 +27,13 @@ import banner from '@/src/assets/img/home/home-work-together.png';
     max-width: 500px;
     margin: 0 auto;
 
-    div p {
-      margin: 0.5rem 0 1.5rem;
+    header {
+      margin-top: var(--content-blocks-gap-mobile);
+      place-self: center;
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
     }
     gap: var(--common-gap-mobile);
     img {
@@ -36,12 +42,17 @@ import banner from '@/src/assets/img/home/home-work-together.png';
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     .banner {
       grid-template-columns: 1fr 1fr;
       max-width: none;
-      div {
-        place-self: center;
+      header {
+        place-self: start;
+        padding-left: 2rem;
+        margin: 0;
+        h1 {
+          font-size: 2rem;
+        }
         h4 {
           margin-bottom: 1rem;
         }

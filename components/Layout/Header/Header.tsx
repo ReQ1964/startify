@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react';
 import classes from './Header.module.scss';
-import logo from '@/src/assets/logo.png';
+import logo from '@/src/assets/icons/logo.webp';
 import menuClose from '@/src/assets/icons/menuClose.svg';
 import menuOpen from '@/src/assets/icons/menuOpen.svg';
 
