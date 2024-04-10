@@ -5,16 +5,16 @@ import { Image } from 'astro:assets';
 ---
 
 <section>
+  <h1>What makes HR Startify different?</h1>
   <ul>
-    <h1>What makes HR Startify different?</h1>
     {
       prosList.map((pro) => (
         <li>
           <Image
             src={arrowRight}
-            alt="A blue arrow pointing right, towards the text."
+            alt="A blue arrow pointing right, on the text."
           />
-          {pro.text}
+          <p>{pro.text}</p>
         </li>
       ))
     }
@@ -24,15 +24,18 @@ import { Image } from 'astro:assets';
 <style lang="scss">
   section {
     margin: 4rem 0 2rem;
+    h1 {
+      background-color: var(--background-color-tertiary);
+      color: var(--text-color-secondary);
+      text-align: center;
+      padding-top: 2rem;
+    }
     ul {
       display: grid;
-      gap: 3rem;
+      gap: calc(var(--common-gap-mobile) + 1rem);
       background-color: var(--background-color-tertiary);
       padding: var(--block-padding-mobile);
-      h1 {
-        color: var(--text-color-secondary);
-        text-align: center;
-      }
+
       li {
         display: flex;
         flex-direction: row;

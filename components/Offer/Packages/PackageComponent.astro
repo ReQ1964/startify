@@ -12,7 +12,7 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     {hrPackage.data.title}
   </h1>
   <div class="description">
-    <h4>Whom is it for?</h4>
+    <h2>Whom is it for?</h2>
     <p>{hrPackage.data.description}</p>
   </div>
 
@@ -60,7 +60,7 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
       {
         hrPackage.data.optionalModules ? (
           <div class="optionalModules">
-            <h4>Optional modules and add-ons:</h4>
+            <h2>Optional modules and add-ons:</h2>
             <ul>
               {hrPackage.data.optionalModules.map(
                 (singleModule: hrPackageType) => (
@@ -71,10 +71,10 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
           </div>
         ) : null
       }
-      <footer>
-        <h4>How long?</h4>
+      <aside>
+        <h2>How long?</h2>
         <p>{hrPackage.data.duration}</p>
-      </footer>
+      </aside>
     </section>
   </section>
 </article>
@@ -87,35 +87,36 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     }
   }
   .description {
-    margin-bottom: var(--content-blocks-margin);
+    margin-bottom: var(--content-blocks-gap-mobile);
   }
   .mainContainer {
     display: grid;
-    gap: var(--content-blocks-margin);
+    gap: var(--content-blocks-gap-mobile);
     & > img {
       height: 200px;
       object-fit: cover;
-      border-radius: 1.5rem;
+      border-radius: var(--common-border-radius);
     }
     .content {
       display: grid;
-      gap: var(--content-blocks-margin);
+      gap: var(--content-blocks-gap-mobile);
     }
   }
 
   h1,
-  h4 {
+  h2 {
     color: var(--text-color-secondary);
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
-  h4 {
+  h2 {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
   }
 
   .featuresTitle {
-    margin-bottom: 2rem;
+    margin-bottom: var(--common-gap-mobile);
   }
   .features {
     display: grid;
@@ -136,6 +137,16 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
       display: flex;
       align-items: center;
       gap: 0.5rem;
+    }
+  }
+  .optionalModules {
+    ul {
+      display: grid;
+      gap: 1rem;
+      li {
+        list-style: disc;
+        list-style-position: inside;
+      }
     }
   }
 

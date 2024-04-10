@@ -13,7 +13,7 @@ import ButtonLink from '../Common/ButtonLink.astro';
   <div class="imageContainer">
     <Image
       src={founderPicture}
-      alt="Picture of the website's founder"
+      alt="A picture of the website's founder"
       quality={100}
     />
   </div>
@@ -40,7 +40,7 @@ import ButtonLink from '../Common/ButtonLink.astro';
 <style lang="scss">
   .founderInfo {
     display: grid;
-    gap: var(--common-gap);
+    gap: var(--common-gap-mobile);
     header {
       display: grid;
       gap: 1rem;
@@ -53,7 +53,8 @@ import ButtonLink from '../Common/ButtonLink.astro';
     section {
       display: flex;
       flex-direction: column;
-      gap: var(--common-gap);
+      justify-content: space-between;
+      gap: var(--common-gap-mobile);
     }
   }
   @media (min-width: 960px) {

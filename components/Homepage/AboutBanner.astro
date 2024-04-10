@@ -10,10 +10,10 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     <Image
       src={banner}
       alt="Two people talking and working on two laptops."
-      quality={100}
+      quality={80}
     />
-    <div>
-      <h3>WELCOME TO STARTIFY</h3>
+    <article>
+      <h2>WELCOME TO STARTIFY</h2>
       <p>
         Your Partner of passionate people & culture professionals who design
         powerful human resources experience for you.
@@ -22,7 +22,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
         We work with small-medium organizations who want to get the people piece
         right.
       </p>
-    </div>
+    </article>
   </section>
 </UniversalWrapper>
 <style lang="scss">
@@ -35,28 +35,28 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
   }
   .content {
     display: grid;
-    gap: var(--common-gap);
+    gap: var(--content-blocks-gap-mobile);
     img {
-      border-radius: 1.25rem;
+      border-radius: var(--common-border-radius);
     }
-    h3 {
+    h2 {
       color: var(--text-color-secondary);
     }
     p:nth-of-type(2) {
-      margin-top: 2rem;
+      margin-top: var(--common-gap-mobile);
     }
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: var(--h1-size);
-      margin-bottom: 4rem;
+      margin-bottom: calc(var(--common-gap-mobile) + 1rem);
+      font-size: 2.2rem;
     }
     .content {
       grid-template-columns: 1.7fr 1fr;
-      div {
+      article {
         place-self: center;
-        h3 {
+        h2 {
           margin-bottom: 1rem;
         }
       }

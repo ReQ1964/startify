@@ -29,12 +29,12 @@ const { summary } = Astro.props;
     }
     header {
       display: grid;
-      gap: var(--common-gap);
+      gap: var(--common-gap-mobile);
     }
 
     .lowerContainer {
       display: grid;
-      gap: var(--common-gap);
+      gap: var(--common-gap-mobile);
     }
     a {
       display: flex;
@@ -43,7 +43,7 @@ const { summary } = Astro.props;
       text-decoration: none;
       border: 2px solid var(--text-color-primary);
       color: var(--text-color-primary);
-      background-color: #fff;
+      background-color: var(--background-color-primary);
       padding: 1rem 0.2rem;
       cursor: pointer;
     }

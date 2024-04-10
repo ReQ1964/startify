@@ -21,9 +21,10 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 <style lang="scss">
   h1 {
     color: var(--text-color-secondary);
-    margin-bottom: 3rem;
+    margin-bottom: var(--content-blocks-gap-mobile);
     text-align: center;
     margin-top: 2rem;
+    font-size: 2rem;
   }
   article {
     display: grid;
@@ -35,9 +36,9 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     }
     ul {
       display: grid;
-      gap: 2rem;
+      gap: var(--common-gap-mobile);
       background-color: #f5f5f5;
-      border-radius: 1.5rem;
+      border-radius: var(--common-border-radius);
       padding: 2rem;
       li {
         list-style: disc;
@@ -47,7 +48,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
   @media (min-width: 768px) {
     article {
       grid-template-columns: 1fr 1.2fr;
-      gap: 2rem;
+      gap: var(--common-gap-mobile);
       img {
         height: 100%;
         margin-bottom: 0;
