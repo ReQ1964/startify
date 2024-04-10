@@ -88,7 +88,7 @@ const { class: className, ...rest } = Astro.props;
     background-color: var(--background-color-secondary);
     max-width: 500px;
     width: 100%;
-    border-radius: 1.5rem;
+    border-radius: var(--common-border-radius);
     padding: 1rem;
     margin: 0 auto;
     .hidden {
@@ -109,13 +109,13 @@ const { class: className, ...rest } = Astro.props;
       gap: 0.3rem;
       input {
         border: none;
-        border-radius: 2rem;
+        border-radius: var(--common-border-radius);
         padding: 0.5rem 1rem;
       }
       textarea {
         resize: none;
         border: none;
-        border-radius: 1.5rem;
+        border-radius: var(--common-border-radius);
         padding: 0.7rem;
       }
       input:focus,

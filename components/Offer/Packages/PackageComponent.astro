@@ -71,10 +71,10 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
           </div>
         ) : null
       }
-      <footer>
+      <aside>
         <h4>How long?</h4>
         <p>{hrPackage.data.duration}</p>
-      </footer>
+      </aside>
     </section>
   </section>
 </article>
@@ -87,19 +87,19 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     }
   }
   .description {
-    margin-bottom: var(--content-blocks-margin);
+    margin-bottom: var(--content-blocks-gap-mobile);
   }
   .mainContainer {
     display: grid;
-    gap: var(--content-blocks-margin);
+    gap: var(--content-blocks-gap-mobile);
     & > img {
       height: 200px;
       object-fit: cover;
-      border-radius: 1.5rem;
+      border-radius: var(--common-border-radius);
     }
     .content {
       display: grid;
-      gap: var(--content-blocks-margin);
+      gap: var(--content-blocks-gap-mobile);
     }
   }
 
@@ -108,14 +108,14 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     color: var(--text-color-secondary);
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   h4 {
     margin-bottom: 1rem;
   }
 
   .featuresTitle {
-    margin-bottom: 2rem;
+    margin-bottom: var(--common-gap-mobile);
   }
   .features {
     display: grid;
@@ -136,6 +136,16 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
       display: flex;
       align-items: center;
       gap: 0.5rem;
+    }
+  }
+  .optionalModules {
+    ul {
+      display: grid;
+      gap: 1rem;
+      li {
+        list-style: disc;
+        list-style-position: inside;
+      }
     }
   }
 
