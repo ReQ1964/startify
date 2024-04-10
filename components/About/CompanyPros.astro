@@ -12,7 +12,7 @@ import { Image } from 'astro:assets';
         <li>
           <Image
             src={arrowRight}
-            alt="A blue arrow pointing right, towards the text."
+            alt="A blue arrow pointing right, on the text."
           />
           {pro.text}
         </li>
@@ -26,7 +26,7 @@ import { Image } from 'astro:assets';
     margin: 4rem 0 2rem;
     ul {
       display: grid;
-      gap: 3rem;
+      gap: calc(var(--common-gap-mobile) + 1rem);
       background-color: var(--background-color-tertiary);
       padding: var(--block-padding-mobile);
       h1 {

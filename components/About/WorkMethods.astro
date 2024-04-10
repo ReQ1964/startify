@@ -24,12 +24,14 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 
 <style lang="scss">
   h1 {
-    margin-bottom: 1rem;
+    margin-bottom: var(--common-gap-mobile);
     text-align: center;
   }
   .description {
     display: grid;
-    gap: 3rem;
+    gap: var(--common-gap-mobile);
+    line-height: 1.35rem;
+    word-spacing: 0.05rem;
     .highlight {
       color: var(--text-color-secondary);
     }

@@ -18,35 +18,35 @@ const { class: className, ...rest } = Astro.props;
   <section class="personalDetails">
     <div>
       <p>
-        <label>First Name</label>
-        <input type="text" name="name" required />
+        <label for="name">First Name</label>
+        <input type="text" name="name" id="name" required />
       </p>
       <p>
-        <label>Last Name</label>
-        <input type="text" name="lastName" required />
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" required />
       </p>
     </div>
     <div>
       <p>
-        <label>E-mail</label>
-        <input type="email" name="email" required />
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required />
       </p>
       <p>
-        <label>Company</label>
-        <input type="text" name="company" required />
+        <label for="company">Company</label>
+        <input type="text" name="company" id="company" required />
       </p>
     </div>
   </section>
   <p>
-    <label>Subject</label>
-    <input type="text" name="subject" required />
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" required />
   </p>
 
   <p>
-    <label>How can I help you?</label>
-    <textarea name="message" rows="8"></textarea>
+    <label for="message">How can I help you?</label>
+    <textarea name="message" rows="8" id="message"></textarea>
   </p>
-  <button type="submit">Send</button>
+  <button type="submit">Submit</button>
 </form>
 
 <script>
@@ -84,7 +84,7 @@ const { class: className, ...rest } = Astro.props;
     display: flex;
     flex-direction: column;
     container-type: inline-size;
-    gap: 3rem;
+    gap: var(--common-gap-mobile);
     background-color: var(--background-color-secondary);
     max-width: 500px;
     width: 100%;
@@ -96,7 +96,7 @@ const { class: className, ...rest } = Astro.props;
     }
     .personalDetails {
       display: grid;
-      gap: 2rem;
+      gap: var(--common-gap-mobile);
       div {
         display: grid;
         gap: 0.5rem;
@@ -110,13 +110,18 @@ const { class: className, ...rest } = Astro.props;
       input {
         border: none;
         border-radius: 2rem;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
       }
       textarea {
         resize: none;
         border: none;
         border-radius: 1.5rem;
         padding: 0.7rem;
+      }
+      input:focus,
+      textarea:focus {
+        outline: black;
+        border: 1px solid black;
       }
     }
     button {
@@ -130,20 +135,16 @@ const { class: className, ...rest } = Astro.props;
       cursor: pointer;
     }
   }
-  @media (min-width: 480px) {
+  @media (min-width: 500px) {
     form {
       padding: 2rem;
-      gap: 2rem;
-    }
-  }
-  @container (min-width: 350px) {
-    form {
+      gap: var(--common-gap-mobile);
       .personalDetails {
         gap: 1rem;
         div {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 2rem;
+          gap: var(--common-gap-mobile);
         }
       }
     }
