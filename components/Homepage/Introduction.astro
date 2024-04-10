@@ -1,24 +1,24 @@
 ---
 import { Image } from 'astro:assets';
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 import homeOffice from '@/src/assets/img/home/home-office.png';
 import homeOfficeBg from '@/src/assets/img/home/home-photos-bg.png';
-import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
 <UniversalWrapper>
-  <div class="upperContainer">
-    <header>
-      <div>
+  <section class="mainContent">
+    <article>
+      <header>
         <h1>HR STARTIFY</h1>
-        <h3>START YOUR HR PROPERLY</h3>
-      </div>
+        <h2>START YOUR HR PROPERLY</h2>
+      </header>
       <p class="description">
         Our mission is simple: to provide you with a comprehensive HR expertise
         & top-notch solutions exactly when you need it in a pay-as-you service
         model. We give you safeguard peace of mind while you focus on your
         day-to-day business.
       </p>
-    </header>
+    </article>
     <div class="imageContainer">
       <Image
         src={homeOffice}
@@ -28,22 +28,22 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
       />
       <Image
         src={homeOfficeBg}
-        alt="A grey background for the office photo."
+        alt="A gray background for the office photo."
         class="officeBackgroundImage"
+        quality={0}
       />
     </div>
-  </div>
+  </section>
   <p class="catchphrase">
     <span>EMPOWER</span> your business with strategic HR for growth and success.
   </p>
 </UniversalWrapper>
 
 <style lang="scss">
-  header {
+  article {
     display: flex;
     flex-direction: column;
-    gap: var(--common-gap);
-    min-width: 300px;
+    gap: var(--common-gap-mobile);
     h1 {
       color: var(--text-color-secondary);
       font-size: 1.7rem;
@@ -53,41 +53,42 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
   .imageContainer {
     position: relative;
     max-width: 500px;
-    margin: var(--content-blocks-margin) auto;
+    margin: var(--content-blocks-gap-mobile) auto;
+
+    .officeBackgroundImage {
+      z-index: 1;
+    }
     .officeImage {
       position: absolute;
-      z-index: 3;
+      z-index: 2;
       top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 92%;
     }
-    .officeBackgroundImage {
-      z-index: 1;
-    }
   }
 
   .catchphrase {
     text-align: center;
-    margin-top: calc(var(--content-blocks-margin) + 1rem);
+    margin-top: calc(var(--content-blocks-gap-mobile) + 2rem);
     span {
       color: var(--text-color-secondary);
     }
   }
 
   @media (min-width: 768px) {
-    .upperContainer {
+    .mainContent {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: var(--common-gap);
-      header {
+      gap: var(--common-gap-mobile);
+      article {
         width: 50%;
         h1 {
-          font-size: 2.4rem;
+          font-size: var(--h1-size-desktop);
         }
-        h3 {
+        h2 {
           font-size: 2rem;
         }
       }
@@ -97,15 +98,15 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
       }
     }
     .catchphrase {
-      margin: 8rem 0 2rem;
+      margin: 9rem 0 2rem;
     }
   }
 
   @media (min-width: 1280px) {
-    .upperContainer {
-      gap: 6rem;
-      header {
-        gap: calc(var(--common-gap) + 2rem);
+    .mainContent {
+      gap: calc(var(--content-blocks-gap-desktop));
+      article {
+        gap: calc(var(--common-gap-desktop));
       }
     }
   }
