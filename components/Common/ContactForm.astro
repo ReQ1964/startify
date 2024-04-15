@@ -131,9 +131,13 @@ const { class: className, ...rest } = Astro.props;
       padding: 0.5em 2em;
       border-radius: 1.25em;
       border: 1px solid black;
-      color: rgba(0, 0, 0, 0.8);
+      color: rgba(0, 0, 0, 0.75);
       background-color: var(--background-color-primary);
       cursor: pointer;
+      &:hover {
+        transform: scale(1.01);
+        transition: 0.1s;
+      }
     }
   }
   @media (min-width: 500px) {
