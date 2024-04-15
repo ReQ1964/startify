@@ -3,21 +3,19 @@
   "title": "HR Business Partner (Premium Package)",
   "image": "./images/premiumPackageBanner.png",
   "imageAlt": "A top-down view of a desk with books, glasses, coffee and person's hands taking notes",
-  "description": "This option is great for small & medium businesses or teams who need HR support regularly on a variety of topics, usually for organizations or teams between 10 - 50 people.Use this subscription to get an interim HR Consultant available for your business who can be relied upon by your team. You will have access to meaningful HR solutions, template development, meetings, recruitment and access to full Startify HR documents suite. The HR Business Partner package is a great solution for busy people-oriented companies who need an experienced and hands-on HR professional involved regularly. This subscription is great to keep you on top of operational HR and chip away at larger projects.",
+  "description": "The HR Leadership subscription is designed for businesses who need impact and change in their HR function. It suits companies with 30 employees and above or those who have ambitious people-related goals. This subscription involves weekly collaboration between a dedicated Startify HR consultant and your leadership team. Use the time to implement a new HR software system, run team building workshops, undertake compliance reviews and much more.",
   "features": [
-    "Recruitment, Talent Acquisition",
     "Recruitment Toolkit exclusively designed for your organization",
     "Sourcing Strategy Implementation",
     "EVP & Employer Branding Strategy",
-    "Talent Management",
-    "Performance Management",
-    "Employee Engagement",
-    "Training and Development",
-    "HR Compliance & Legislation",
-    "Talent Maturity Framework",
-    "Design of Incentive Program",
-    "Access to full suite of quality HR templates & procedures",
-    "Monthly check-ins"
+    "Strategic HR Plan",
+    "Building a high-performing executive team",
+    "People analytics & reporting",
+    "Market Intelligence",
+    "Forecasts reports on workforce needs and trends",
+    "Time & Motion study (1-off)",
+    "Coaching/ Training sessions",
+    "HR Road Map"
   ],
-  "duration": "20 hours a month"
+  "duration": "40 hours a month"
 }
