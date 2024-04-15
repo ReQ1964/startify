@@ -120,8 +120,8 @@ const { class: className, ...rest } = Astro.props;
       }
       input:focus,
       textarea:focus {
-        outline: black;
-        border: 1px solid black;
+        outline: var(--text-color-primary);
+        box-shadow: 0px 0px 0px 1px var(--text-color-primary);
       }
     }
     button {
@@ -131,6 +131,7 @@ const { class: className, ...rest } = Astro.props;
       padding: 0.5em 2em;
       border-radius: 1.25em;
       border: 1px solid black;
+      color: rgba(0, 0, 0, 0.8);
       background-color: var(--background-color-primary);
       cursor: pointer;
     }
