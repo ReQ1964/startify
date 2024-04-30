@@ -11,7 +11,7 @@ const packagesCollection = defineCollection({
       description: z.string(),
       features: z.array(z.union([z.string(), z.record(z.array(z.string()))])),
       optionalModules: z.array(z.string()).optional(),
-      duration: z.string(),
+      profile: z.string(),
     }),
 });
 

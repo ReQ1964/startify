@@ -13,8 +13,8 @@
     padding: 1rem 2rem;
     background-color: var(--background-color-primary);
     .logo {
-      height: 50px;
-      width: 50px;
+      height: 80px;
+      width: 80px;
     }
     .menuIcon {
       width: 2.5rem;
@@ -26,6 +26,9 @@
       ul {
         display: flex;
         gap: 2.5rem;
+        li {
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -43,6 +46,9 @@
       justify-content: center;
       align-items: center;
       gap: var(--common-gap-mobile);
+      li {
+        font-size: 1.1rem;
+      }
     }
   }
   .active {
