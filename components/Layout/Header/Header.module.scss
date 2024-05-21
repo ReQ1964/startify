@@ -13,8 +13,8 @@
     padding: 1rem 2rem;
     background-color: var(--background-color-primary);
     .logo {
-      height: 120px;
-      width: 120px;
+      height: 80px;
+      width: 80px;
     }
     .menuIcon {
       width: 2.5rem;
@@ -59,6 +59,11 @@
 @media (min-width: 640px) {
   .header {
     .navigation {
+      .logo {
+        height: 120px;
+        width: 120px;
+      }
+
       .desktopLinks {
         display: block;
       }
