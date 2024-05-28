@@ -3,7 +3,6 @@ import UniversalWrapper from '@/components/Layout/UniversalWrapper.astro';
 import Summary from './Summary.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import Summary2 from './Summary2.astro';
 
 const allSummaries = await getCollection('packagesSummaries');
 type summaryType = CollectionEntry<'packagesSummaries'>;
@@ -11,7 +10,6 @@ type summaryType = CollectionEntry<'packagesSummaries'>;
 
 <UniversalWrapper class="summariesList">
   {allSummaries.map((summary: summaryType) => <Summary summary={summary} />)}
-  {allSummaries.map((summary: summaryType) => <Summary2 summary={summary} />)}
 </UniversalWrapper>
 
 <style lang="scss">
