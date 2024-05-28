@@ -1,0 +1,55 @@
+---
+const { summary } = Astro.props;
+---
+
+<article>
+  <header>
+    <h1>{summary.data.title}</h1>
+    <p>{summary.data.details}</p>
+  </header>
+  <div class="lowerContainer">
+    <a href="/contact">{summary.data.price}</a>
+  </div>
+</article>
+
+<style lang="scss">
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border: 1px solid black;
+    max-width: 300px;
+    height: 450px;
+    margin: 0 auto;
+    h1 {
+      color: var(--text-color-secondary);
+      font-size: 1.8rem;
+    }
+    header {
+      display: grid;
+      gap: var(--common-gap-mobile);
+    }
+
+    .lowerContainer {
+      display: grid;
+      gap: var(--common-gap-mobile);
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border: 2px solid var(--text-color-primary);
+      color: var(--text-color-primary);
+      background-color: var(--background-color-primary);
+      padding: 1rem 0.2rem;
+      cursor: pointer;
+      &:hover {
+        border: 2px solid var(--text-color-secondary);
+        color: var(--text-color-secondary);
+      }
+    }
+  }
+</style>
