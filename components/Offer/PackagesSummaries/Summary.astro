@@ -8,7 +8,7 @@ const { summary } = Astro.props;
     <p>{summary.data.details}</p>
   </header>
   <div class="lowerContainer">
-    <p>{summary.data.teamSize}</p>
+    <p>{summary.data.price}</p>
     <a href="/contact">GET STARTED</a>
   </div>
 </article>
@@ -36,6 +36,7 @@ const { summary } = Astro.props;
       display: grid;
       gap: var(--common-gap-mobile);
     }
+
     a {
       display: flex;
       justify-content: center;

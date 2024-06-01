@@ -20,7 +20,7 @@ const summariesCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     details: z.string(),
-    teamSize: z.string(),
+    price: z.string(),
   }),
 });
 
