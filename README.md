@@ -8,7 +8,6 @@ Additionally, I've focused on optimizing the SEO ensuring maximum visibility and
 - Astro
 - React
 - Typescript
-- zod
 - Husky
 - SCSS
 
