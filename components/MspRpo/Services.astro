@@ -1,0 +1,103 @@
+---
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+---
+
+<section class="services-section">
+  <UniversalWrapper>
+    <h1>✅ What We Help With:</h1>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>💡 RPO Design & Implementation</h3>
+        <p>
+          Set up or optimise your in-house or outsourced recruitment engine—from
+          process to performance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>🔗 MSP Strategy & Execution</h3>
+        <p>
+          Manage your contingent workforce more effectively with support on
+          supplier strategy, compliance, and governance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>🧩 Total Talent Management</h3>
+        <p>
+          Align permanent and contract hiring into one cohesive, forward-looking
+          strategy.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>📊 Workforce Analytics & Insights</h3>
+        <p>
+          Gain visibility with data-led insights that drive better hiring
+          decisions and reduce costs.
+        </p>
+      </div>
+
+      <div class="service-card full-width">
+        <h3>🛠️ Vendor Tech & Tooling Support</h3>
+        <p>
+          Choose and implement the right VMS or HR tech to support your talent
+          delivery model.
+        </p>
+      </div>
+    </div>
+  </UniversalWrapper>
+</section>
+
+<style lang="scss">
+  .services-section {
+    background-color: var(--background-color-quaternary);
+    margin: 4rem 0 2rem;
+  }
+
+  .services-section h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .service-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 0 auto;
+
+    h3 {
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    &.full-width {
+      max-width: 100%;
+
+      @media (min-width: 768px) {
+        grid-column: span 2;
+      }
+    }
+
+    @media (min-width: 768px) {
+      max-width: none;
+      margin: 0;
+    }
+  }
+</style>

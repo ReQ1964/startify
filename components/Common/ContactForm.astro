@@ -86,17 +86,20 @@ const { class: className, ...rest } = Astro.props;
     container-type: inline-size;
     gap: var(--common-gap-mobile);
     background-color: var(--background-color-secondary);
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     border-radius: var(--common-border-radius);
     padding: 1rem;
     margin: 0 auto;
+
     .hidden {
       display: none;
     }
+
     .personalDetails {
       display: grid;
       gap: var(--common-gap-mobile);
+
       div {
         display: grid;
         gap: 0.5rem;
@@ -107,23 +110,27 @@ const { class: className, ...rest } = Astro.props;
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
-      input {
+
+      input,
+      textarea {
+        width: 100%;
         border: none;
         border-radius: var(--common-border-radius);
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
+        box-sizing: border-box;
       }
+
       textarea {
         resize: none;
-        border: none;
-        border-radius: var(--common-border-radius);
-        padding: 0.7rem;
       }
+
       input:focus,
       textarea:focus {
         outline: var(--text-color-primary);
         box-shadow: 0px 0px 0px 1px var(--text-color-primary);
       }
     }
+
     button {
       width: 80%;
       margin: 0 auto;
@@ -134,18 +141,22 @@ const { class: className, ...rest } = Astro.props;
       color: rgba(0, 0, 0, 0.75);
       background-color: var(--background-color-primary);
       cursor: pointer;
+
       &:hover {
         transform: scale(1.01);
         transition: 0.1s;
       }
     }
   }
+
   @media (min-width: 500px) {
     form {
       padding: 2rem;
       gap: var(--common-gap-mobile);
+
       .personalDetails {
         gap: 1rem;
+
         div {
           display: grid;
           grid-template-columns: 1fr 1fr;
