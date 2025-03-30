@@ -1,5 +1,16 @@
 ---
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+
+const ctaPoints = [
+  {
+    icon: '🎯',
+    text: "Whether you're looking to build, improve, or scale your RPO or MSP model, we offer tailored support backed by real-world expertise.",
+  },
+  {
+    icon: '💰',
+    text: 'Consulting services are billed at SGD 350/hour – ideal for short-term projects, strategic guidance, or ongoing advisory.',
+  },
+];
 ---
 
 <section class="cta-section">
@@ -7,24 +18,17 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     <h1>Ready to Transform Your Hiring Strategy?</h1>
 
     <div class="cta-points">
-      <div class="cta-point">
-        <span class="icon">🎯</span>
-        <p>
-          Whether you're looking to build, improve, or scale your RPO or MSP
-          model, we offer tailored support backed by real-world expertise.
-        </p>
-      </div>
-
-      <div class="cta-point">
-        <span class="icon">💰</span>
-        <p>
-          Consulting services are billed at SGD 350/hour – ideal for short-term
-          projects, strategic guidance, or ongoing advisory.
-        </p>
-      </div>
+      {
+        ctaPoints.map((point, index) => (
+          <div class="cta-point" key={index}>
+            <span class="icon">{point.icon}</span>
+            <p>{point.text}</p>
+          </div>
+        ))
+      }
     </div>
 
-    <a href="/contact" class="cta-button"> Explore RPO & MSP Consulting </a>
+    <a href="/contact" class="cta-button">Explore RPO & MSP Consulting</a>
   </UniversalWrapper>
 </section>
 
@@ -41,7 +45,6 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     }
 
     h1 {
-      font-weight: 700;
       margin-bottom: 2rem;
     }
 

@@ -1,18 +1,18 @@
 ---
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+
+const benefits = [
+  'Extensive global experience in RPO & MSP environments (APAC & Europe)',
+  'Proven results in building scalable, high-performing programs',
+  'Human, tailored consulting with real-world, revenue-focused impact',
+];
 ---
 
 <UniversalWrapper class="benefits-section">
   <h2>Why Work With Us?</h2>
 
   <ul class="benefits-list">
-    <li>
-      Extensive global experience in RPO & MSP environments (APAC & Europe)
-    </li>
-
-    <li>Proven results in building scalable, high-performing programs</li>
-
-    <li>Human, tailored consulting with real-world, revenue-focused impact</li>
+    {benefits.map((benefit, index) => <li key={index}>{benefit}</li>)}
   </ul>
 </UniversalWrapper>
 
@@ -21,7 +21,6 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     max-width: 900px;
 
     h2 {
-      font-weight: 700;
       margin-bottom: 2rem;
     }
 

@@ -1,5 +1,34 @@
 ---
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+
+const services = [
+  {
+    title: '💡 RPO Design & Implementation',
+    description:
+      'Set up or optimise your in-house or outsourced recruitment engine—from process to performance.',
+  },
+  {
+    title: '🔗 MSP Strategy & Execution',
+    description:
+      'Manage your contingent workforce more effectively with support on supplier strategy, compliance, and governance.',
+  },
+  {
+    title: '🧩 Total Talent Management',
+    description:
+      'Align permanent and contract hiring into one cohesive, forward-looking strategy.',
+  },
+  {
+    title: '📊 Workforce Analytics & Insights',
+    description:
+      'Gain visibility with data-led insights that drive better hiring decisions and reduce costs.',
+  },
+  {
+    title: '🛠️ Vendor Tech & Tooling Support',
+    description:
+      'Choose and implement the right VMS or HR tech to support your talent delivery model.',
+    fullWidth: true,
+  },
+];
 ---
 
 <section class="services-section">
@@ -7,45 +36,17 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     <h1>✅ What We Help With:</h1>
 
     <div class="services-grid">
-      <div class="service-card">
-        <h3>💡 RPO Design & Implementation</h3>
-        <p>
-          Set up or optimise your in-house or outsourced recruitment engine—from
-          process to performance.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>🔗 MSP Strategy & Execution</h3>
-        <p>
-          Manage your contingent workforce more effectively with support on
-          supplier strategy, compliance, and governance.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>🧩 Total Talent Management</h3>
-        <p>
-          Align permanent and contract hiring into one cohesive, forward-looking
-          strategy.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>📊 Workforce Analytics & Insights</h3>
-        <p>
-          Gain visibility with data-led insights that drive better hiring
-          decisions and reduce costs.
-        </p>
-      </div>
-
-      <div class="service-card full-width">
-        <h3>🛠️ Vendor Tech & Tooling Support</h3>
-        <p>
-          Choose and implement the right VMS or HR tech to support your talent
-          delivery model.
-        </p>
-      </div>
+      {
+        services.map((service, index) => (
+          <div
+            class={`service-card ${service.fullWidth ? 'full-width' : ''}`}
+            key={index}
+          >
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))
+      }
     </div>
   </UniversalWrapper>
 </section>
@@ -59,7 +60,6 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
   .services-section h1 {
     margin-bottom: 2rem;
     font-size: 2rem;
-    font-weight: bold;
     text-align: center;
   }
 
