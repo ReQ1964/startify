@@ -1,0 +1,83 @@
+---
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+---
+
+<section class="cta-section">
+  <UniversalWrapper class="cta-wrapper">
+    <h1>Ready to Transform Your Hiring Strategy?</h1>
+
+    <div class="cta-points">
+      <div class="cta-point">
+        <span class="icon">🎯</span>
+        <p>
+          Whether you're looking to build, improve, or scale your RPO or MSP
+          model, we offer tailored support backed by real-world expertise.
+        </p>
+      </div>
+
+      <div class="cta-point">
+        <span class="icon">💰</span>
+        <p>
+          Consulting services are billed at SGD 350/hour – ideal for short-term
+          projects, strategic guidance, or ongoing advisory.
+        </p>
+      </div>
+    </div>
+
+    <a href="/contact" class="cta-button"> Explore RPO & MSP Consulting </a>
+  </UniversalWrapper>
+</section>
+
+<style lang="scss">
+  .cta-section {
+    text-align: center;
+    background-color: var(--background-color-quaternary);
+    margin: 4rem 0 2rem;
+    border-bottom: 1px solid #f1f1f1;
+
+    .cta-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .cta-points {
+      margin-bottom: 2rem;
+
+      .cta-point {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        justify-content: center;
+
+        .icon {
+          font-size: 1.5rem;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    .cta-button {
+      display: inline-block;
+      color: white;
+      background-color: var(--text-color-secondary);
+      padding: 0.75rem 2rem;
+      border-radius: 0.25rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+</style>
