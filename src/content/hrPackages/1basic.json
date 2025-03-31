@@ -3,35 +3,37 @@
   "title": "HR On-Demand - Basic Package",
   "image": "./images/basicPackageBanner.png",
   "imageAlt": "A top-down view of a desk with books, glasses, coffee and person's hands taking notes",
-  "description": "Perfect for the small businesses or departments who have under 50 staff. This package will give you the ability to meet in person & call a dedicated HR Consultant at any time and get specific advice on any HR-related matter. Use this subscription for ad-hoc HR advice or monthly HR check-in meetings to keep your people on the right track. This package includes review & updates on HR policies, employment rules and regulations.",
+  "description": "Small businesses or departments with fewer than 50 employees who need flexible, expert support without hiring in-house.",
+  "keyOffering": "Get ad-hoc or monthly access to a dedicated HR Consultant who knows your business. Perfect for compliance, policy reviews, quick HR help, and support in talent and performance management.",
   "features": [
-    "Dedicated HR Professional",
-    "Design of Policies & Procedures",
-    "Talent Acquisition/ Recruitment",
     {
-      "Comprehensive HR Coverage": [
-        "Review of Performance",
-        "Design of Incentive Programs",
-        "Employee benefits review",
-        "Jobs review/creation/ grading",
-        "Salary review & benchmarking"
+      "HR Advisory & Compliance": [
+        "Dedicated HR Professional",
+        "Policy & procedure design",
+        "Employment law guidance",
+        "Monthly HR check-ins"
       ]
     },
     {
-      "Administrative HR Coverage": [
-        "Contracts Management",
-        "Employee Onboarding/ Offboarding",
-        "Employee Record Management",
-        "Time and Attendance tracking",
-        "Exit Management",
-        "Design of HR Forms"
+      "Talent & Performance": [
+        "Performance management",
+        "Employee engagement",
+        "Training and development",
+        "Performance review guidance"
       ]
     },
-    "Compensation & Benefits Administration"
+    {
+      "Admin & Operations": [
+        "Skill-based recruitment support",
+        "Performance review guidance",
+        "Incentive program design",
+        "Job and salary benchmarking"
+      ]
+    }
   ],
   "optionalModules": [
-    "HR Software Implementation",
-    "Employee Handbook Creation"
+    "HR software implementation",
+    "Employee handbook creation"
   ],
   "profile": "Up to 50 employees"
 }

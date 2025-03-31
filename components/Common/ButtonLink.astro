@@ -1,8 +1,8 @@
 ---
-const { text, to } = Astro.props;
+const { text, to, width } = Astro.props;
 ---
 
-<a href={to}>
+<a href={to} style=`width: ${width}`>
   {text}
 </a>
 
