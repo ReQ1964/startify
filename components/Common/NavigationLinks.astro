@@ -14,7 +14,7 @@ const navItems = [
 <ul class={className} {...rest}>
   {
     navItems.map((item) => (
-      <li key={item.path}>
+      <li>
         <a class={currentPath === item.path ? 'active' : ''} href={item.path}>
           {item.label}
         </a>
