@@ -9,7 +9,6 @@ const packagesCollection = defineCollection({
       image: image(),
       imageAlt: z.string(),
       description: z.string(),
-      keyOffering: z.string(),
       features: z.array(z.union([z.string(), z.record(z.array(z.string()))])),
       optionalModules: z.array(z.string()).optional(),
       profile: z.string(),

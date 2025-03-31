@@ -1,26 +1,25 @@
 ---
 const currentPath = Astro.url.pathname;
 const { class: className, ...rest } = Astro.props;
-
-const navItems = [
-  { label: 'HOME', path: '/' },
-  { label: 'ABOUT US', path: '/about' },
-  { label: 'OFFER', path: '/offer' },
-  { label: 'MSP / RPO', path: '/msp-rpo' },
-  { label: 'CONTACT', path: '/contact' },
-];
 ---
 
 <ul class={className} {...rest}>
-  {
-    navItems.map((item) => (
-      <li>
-        <a class={currentPath === item.path ? 'active' : ''} href={item.path}>
-          {item.label}
-        </a>
-      </li>
-    ))
-  }
+  <li>
+    <a class={currentPath === '/' ? 'active' : ''} href="/">HOME</a>
+  </li>
+  <li>
+    <a class={currentPath === '/about' ? 'active' : ''} href="/about"
+      >ABOUT US</a
+    >
+  </li>
+  <li>
+    <a class={currentPath === '/offer' ? 'active' : ''} href="/offer">OFFER</a>
+  </li>
+  <li>
+    <a class={currentPath === '/contact' ? 'active' : ''} href="/contact"
+      >CONTACT</a
+    >
+  </li>
 </ul>
 
 <style lang="scss">
