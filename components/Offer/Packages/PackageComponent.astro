@@ -12,15 +12,8 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     {hrPackage.data.title}
   </h1>
   <div class="description">
-    <div>
-      <h2>Best for</h2>
-      <p>{hrPackage.data.description}</p>
-    </div>
-
-    <div>
-      <h2>Key offering</h2>
-      <p>{hrPackage.data.keyOffering}</p>
-    </div>
+    <h2>Whom is it for?</h2>
+    <p>{hrPackage.data.description}</p>
   </div>
 
   <section class="mainContainer">
@@ -94,8 +87,6 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     }
   }
   .description {
-    display: grid;
-    gap: 2rem;
     margin-bottom: var(--content-blocks-gap-mobile);
   }
   .mainContainer {
@@ -129,7 +120,7 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
   }
   .features {
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     list-style: disc;
     list-style-position: inside;
   }
@@ -179,6 +170,8 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
       }
 
       .content {
+        height: 100%;
+        gap: 4rem;
         grid-row: 1/3;
       }
     }

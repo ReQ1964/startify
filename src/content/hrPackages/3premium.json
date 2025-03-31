@@ -3,32 +3,19 @@
   "title": "HR Business Partner - Premium Package",
   "image": "./images/premiumPackageBanner.png",
   "imageAlt": "A top-down view of a desk with books, glasses, coffee and person's hands taking notes",
-  "description": "Larger businesses (200+ employees) or those undergoing change who need strategic HR leadership and transformation support.",
-  "keyOffering": "Work closely with a senior HR Consultant to drive change, build people strategies, and align HR with business outcomes.",
+  "description": "The HR Leadership subscription is designed for businesses who need impact and change in their HR function. It suits companies with 200 employees and above or those who have ambitious people-related goals. This subscription involves weekly collaboration between a dedicated HR Startify consultant and your leadership team. Use the time to implement a new HR software system, run team building workshops, undertake compliance reviews and much more.",
   "features": [
-    {
-      "Strategic HR Leadership": [
-        "Strategic HR plan & roadmap",
-        "Building high-performing leadership teams",
-        "Coaching & training",
-        "People analytics & reporting"
-      ]
-    },
-    {
-      "Talent Strategy": [
-        "Custom recruitment toolkit",
-        "Sourcing & branding strategy",
-        "Workforce forecasting & market insights",
-        "One-off Time & Motion Study"
-      ]
-    },
-    {
-      "Organizational Development": [
-        "EVP and culture alignment",
-        "Executive collaboration",
-        "Implementation of major initiatives (e.g., HR software)"
-      ]
-    }
+    "Recruitment Toolkit exclusively designed for your organization",
+    "Sourcing Strategy Implementation",
+    "EVP & Employer Branding Strategy",
+    "Strategic HR Plan",
+    "Building a high-performing executive team",
+    "People analytics & reporting",
+    "Market Intelligence",
+    "Forecasts reports on workforce needs and trends",
+    "Time & Motion study (1-off)",
+    "Coaching/ Training sessions",
+    "HR Road Map"
   ],
-  "profile": "200+ employees"
+  "profile": "Above 200 employees"
 }

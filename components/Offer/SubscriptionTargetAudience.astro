@@ -6,10 +6,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
 <UniversalWrapper>
-  <div class="titleContainer">
-    <h1>Is HR Startify right for You?</h1>
-    <h2>Here’s why businesses like yours choose HR Startify:</h2>
-  </div>
+  <h1>Our Startify subscription packages will suit you if:</h1>
   <article>
     <Image
       src={targetAudienceBanner}
@@ -22,19 +19,12 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 </UniversalWrapper>
 
 <style lang="scss">
-  .titleContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  h1 {
     color: var(--text-color-secondary);
     margin-bottom: var(--content-blocks-gap-mobile);
     text-align: center;
     margin-top: 2rem;
-    h1 {
-      font-size: 2rem;
-    }
-  }
-  h1 {
+    font-size: 2rem;
   }
   article {
     display: grid;
