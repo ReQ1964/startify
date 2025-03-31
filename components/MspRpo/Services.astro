@@ -37,11 +37,8 @@ const services = [
 
     <div class="services-grid">
       {
-        services.map((service, index) => (
-          <div
-            class={`service-card ${service.fullWidth ? 'full-width' : ''}`}
-            key={index}
-          >
+        services.map((service) => (
+          <div class={`service-card ${service.fullWidth ? 'full-width' : ''}`}>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </div>
@@ -54,7 +51,7 @@ const services = [
 <style lang="scss">
   .services-section {
     background-color: var(--background-color-quaternary);
-    margin: 4rem 0 2rem;
+    margin: 4rem 0;
   }
 
   .services-section h1 {

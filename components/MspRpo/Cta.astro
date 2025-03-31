@@ -1,5 +1,6 @@
 ---
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+import ButtonLink from '../Common/ButtonLink.astro';
 
 const ctaPoints = [
   {
@@ -19,8 +20,8 @@ const ctaPoints = [
 
     <div class="cta-points">
       {
-        ctaPoints.map((point, index) => (
-          <div class="cta-point" key={index}>
+        ctaPoints.map((point) => (
+          <div class="cta-point">
             <span class="icon">{point.icon}</span>
             <p>{point.text}</p>
           </div>
@@ -28,59 +29,45 @@ const ctaPoints = [
       }
     </div>
 
-    <a href="/contact" class="cta-button">Explore RPO & MSP Consulting</a>
+    <ButtonLink
+      to="mailto:kowa.kat@gmail.com"
+      text="Explore RPO & MSP Consulting"
+      width="450px"
+    />
   </UniversalWrapper>
-</section>
 
-<style lang="scss">
-  .cta-section {
-    text-align: center;
-    background-color: var(--background-color-quaternary);
-    margin: 4rem 0 2rem;
-    border-bottom: 1px solid #f1f1f1;
+  <style lang="scss">
+    .cta-section {
+      text-align: center;
+      background-color: var(--background-color-quaternary);
+      margin: 4rem 0;
+      border-bottom: 1px solid #f1f1f1;
 
-    .cta-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      margin-bottom: 2rem;
-    }
-
-    .cta-points {
-      margin-bottom: 2rem;
-
-      .cta-point {
-        display: flex;
-        align-items: center;
+      .cta-wrapper {
+        display: grid;
         gap: 1rem;
-        margin-bottom: 1rem;
-        justify-content: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
 
-        .icon {
-          font-size: 1.5rem;
-        }
+      .cta-points {
+        margin-bottom: 0.5remx;
+        .cta-point {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          justify-content: center;
 
-        p {
-          text-align: left;
+          .icon {
+            font-size: 1.5rem;
+          }
+
+          p {
+            text-align: left;
+          }
         }
       }
     }
-
-    .cta-button {
-      display: inline-block;
-      color: white;
-      background-color: var(--text-color-secondary);
-      padding: 0.75rem 2rem;
-      border-radius: 0.25rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 0.9;
-      }
-    }
-  }
-</style>
+  </style>
+</section>
