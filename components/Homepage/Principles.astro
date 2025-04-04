@@ -11,7 +11,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 <UniversalWrapper class="principles">
   <header>
     <div class="title">
-      <h1>How we can help your</h1>
+      <h1>how we can help your</h1>
       <h2>BUSINESS</h2>
     </div>
     <p>
@@ -37,7 +37,7 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
     <ol>
       {principlesList.map((principle) => <li>{principle.text}</li>)}
     </ol>
-    <ButtonLink text="Discover more" to="/offer" />
+    <ButtonLink text="discover more" to="/offer" />
   </article>
 </UniversalWrapper>
 
@@ -101,6 +101,13 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
         width: calc(95% - 30px);
         counter-increment: list;
         margin-left: 30px;
+      }
+      li:last-child {
+        &::before {
+          content: '';
+        }
+        margin-left: 0;
+        width: 100%;
       }
     }
   }

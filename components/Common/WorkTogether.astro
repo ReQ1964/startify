@@ -14,8 +14,18 @@ import banner from '@/src/assets/img/home/home-work-together.png';
       loading="eager"
     />
     <header>
-      <h1>LET&apos;S WORK TOGETHER!</h1>
-      <p>Contact us today and see how we can help.</p>
+      <h1>let&apos;s talk</h1>
+      <div class="contact">
+        <p>Have a question or ready to get started?</p>
+        <p>
+          Call us at <a href="tel:+6584209754">+65 8420 9754</a> or simply fill out
+          the form below—we’ll get back to you shortly.
+        </p>
+      </div>
+      <p>
+        Whether you're exploring our services or dealing with a complex business
+        challenge, we’re here to help.
+      </p>
     </header>
     <ContactForm class="contactForm" />
   </section>
@@ -27,12 +37,31 @@ import banner from '@/src/assets/img/home/home-work-together.png';
     max-width: 500px;
     margin: 0 auto;
 
+    a {
+      display: inline-block;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-color-primary);
+      transition-duration: 100ms;
+      &:hover {
+        scale: 1.02;
+      }
+    }
+
     header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       margin-top: var(--content-blocks-gap-mobile);
       place-self: center;
       h1 {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
+      }
+
+      .contact {
+        display: grid;
+        gap: 0.2rem;
       }
     }
     gap: var(--common-gap-mobile);

@@ -3,36 +3,23 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 import ButtonLink from '../Common/ButtonLink.astro';
 
 const ctaPoints = [
-  {
-    icon: '🎯',
-    text: "Whether you're looking to build, improve, or scale your RPO or MSP model, we offer tailored support backed by real-world expertise.",
-  },
-  {
-    icon: '💰',
-    text: 'Consulting services are billed at SGD 350/hour – ideal for short-term projects, strategic guidance, or ongoing advisory.',
-  },
+  "Whether you're looking to build, improve, or scale your RPO or MSP model, we offer tailored support backed by real-world expertise.",
+  'Consulting services are billed at SGD 350/hour – ideal for short-term projects, strategic guidance, or ongoing advisory.',
 ];
 ---
 
 <section class="cta-section">
   <UniversalWrapper class="cta-wrapper">
-    <h1>Ready to Transform Your Hiring Strategy?</h1>
+    <h1>ready to transform your hiring strategy?</h1>
 
     <div class="cta-points">
-      {
-        ctaPoints.map((point) => (
-          <div class="cta-point">
-            <span class="icon">{point.icon}</span>
-            <p>{point.text}</p>
-          </div>
-        ))
-      }
+      {ctaPoints.map((point) => <p>{point}</p>)}
     </div>
 
     <ButtonLink
-      to="mailto:kasia.kowalska@hrstartify.com"
-      text="Explore RPO & MSP Consulting"
-      width="450px"
+      to="/contact"
+      text="explore RPO & MSP consulting"
+      width="clamp(100px, 80%, 450px)"
     />
   </UniversalWrapper>
 
@@ -51,21 +38,14 @@ const ctaPoints = [
       }
 
       .cta-points {
-        margin-bottom: 0.5remx;
-        .cta-point {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          margin-bottom: 1rem;
-          justify-content: center;
-
-          .icon {
-            font-size: 1.5rem;
-          }
-
-          p {
-            text-align: left;
-          }
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        p {
+          text-align: left;
         }
       }
     }
