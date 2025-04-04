@@ -33,7 +33,7 @@ const services = [
 
 <section class="services-section">
   <UniversalWrapper>
-    <h1>✅ What We Help With:</h1>
+    <h1>what we help with:</h1>
 
     <div class="services-grid">
       {
@@ -85,9 +85,10 @@ const services = [
     }
 
     &.full-width {
-      @media (min-width: 768px) {
-        grid-column: span 2;
-        max-width: 100%;
+      @media (min-width: 1024px) {
+        width: 50%;
+        margin: 0 auto;
+        grid-column: 1 / -1;
       }
     }
 
