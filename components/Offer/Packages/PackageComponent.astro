@@ -12,8 +12,15 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     {hrPackage.data.title}
   </h1>
   <div class="description">
-    <h2>Whom is it for?</h2>
-    <p>{hrPackage.data.description}</p>
+    <div>
+      <h2>best for</h2>
+      <p>{hrPackage.data.description}</p>
+    </div>
+
+    <div>
+      <h2>key offering</h2>
+      <p>{hrPackage.data.keyOffering}</p>
+    </div>
   </div>
 
   <section class="mainContainer">
@@ -25,7 +32,6 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     />
     <section class="content">
       <div>
-        <h1 class="featuresTitle">What is included?</h1>
         <ul class="features">
           {
             hrPackage.data.features.map((item: hrPackageType) => {
@@ -60,7 +66,7 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
       {
         hrPackage.data.optionalModules ? (
           <div class="optionalModules">
-            <h2>Optional modules and add-ons:</h2>
+            <h2>optional modules and add-ons:</h2>
             <ul>
               {hrPackage.data.optionalModules.map(
                 (singleModule: hrPackageType) => (
@@ -72,7 +78,7 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
         ) : null
       }
       <aside>
-        <h2>Company profile</h2>
+        <h2>company profile</h2>
         <p>{hrPackage.data.profile}</p>
       </aside>
     </section>
@@ -87,6 +93,8 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     }
   }
   .description {
+    display: grid;
+    gap: 2rem;
     margin-bottom: var(--content-blocks-gap-mobile);
   }
   .mainContainer {
@@ -115,12 +123,9 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
     margin-bottom: 1rem;
   }
 
-  .featuresTitle {
-    margin-bottom: var(--common-gap-mobile);
-  }
   .features {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     list-style: disc;
     list-style-position: inside;
   }
@@ -170,8 +175,6 @@ import arrowRightBlue from '@/src/assets/icons/arrowRightBlue.svg';
       }
 
       .content {
-        height: 100%;
-        gap: 4rem;
         grid-row: 1/3;
       }
     }

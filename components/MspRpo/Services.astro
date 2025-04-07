@@ -1,0 +1,100 @@
+---
+import UniversalWrapper from '../Layout/UniversalWrapper.astro';
+
+const services = [
+  {
+    title: '💡 RPO Design & Implementation',
+    description:
+      'Set up or optimise your in-house or outsourced recruitment engine—from process to performance.',
+  },
+  {
+    title: '🔗 MSP Strategy & Execution',
+    description:
+      'Manage your contingent workforce more effectively with support on supplier strategy, compliance, and governance.',
+  },
+  {
+    title: '🧩 Total Talent Management',
+    description:
+      'Align permanent and contract hiring into one cohesive, forward-looking strategy.',
+  },
+  {
+    title: '📊 Workforce Analytics & Insights',
+    description:
+      'Gain visibility with data-led insights that drive better hiring decisions and reduce costs.',
+  },
+  {
+    title: '🛠️ Vendor Tech & Tooling Support',
+    description:
+      'Choose and implement the right VMS or HR tech to support your talent delivery model.',
+    fullWidth: true,
+  },
+];
+---
+
+<section class="services-section">
+  <UniversalWrapper>
+    <h1>what we help with:</h1>
+
+    <div class="services-grid">
+      {
+        services.map((service) => (
+          <div class={`service-card ${service.fullWidth ? 'full-width' : ''}`}>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </UniversalWrapper>
+</section>
+
+<style lang="scss">
+  .services-section {
+    background-color: var(--background-color-quaternary);
+    margin: 4rem 0;
+  }
+
+  .services-section h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .service-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 0 auto;
+
+    h3 {
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    &.full-width {
+      @media (min-width: 1024px) {
+        width: 50%;
+        margin: 0 auto;
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (min-width: 768px) {
+      max-width: none;
+      margin: 0;
+    }
+  }
+</style>

@@ -6,34 +6,145 @@ import Footer from '@/components/Layout/Footer/Footer.astro';
 interface LayoutProps {
   title?: string;
   description?: string;
-  image?: string;
+  type?: string;
+  keywords?: string;
 }
 
 const {
-  title = 'Startify',
-  description = 'A Human Resources page, where you can find a package that suits your company.',
-  image = "Let's find a suitable package for you.",
+  title = 'HR Startify',
+  description = 'Discover HR Startify – your ultimate HR solution. Streamline recruitment, boost employee engagement, and ensure compliance with our tailored packages. Elevate your HR game today!',
+  type = 'website',
+  keywords = [
+    'HR',
+    'human resources',
+    'company packages',
+    'startify',
+    'recruitment process outsourcing',
+    'RPO',
+    'managed service provider',
+    'MSP',
+    'talent acquisition',
+    'employee onboarding',
+    'performance management',
+    'employee engagement',
+    'workforce planning',
+    'HR analytics',
+    'HR metrics',
+    'compensation and benefits',
+    'employee relations',
+    'diversity and inclusion',
+    'training and development',
+    'succession planning',
+    'HR audit',
+    'HR strategy',
+    'HR solutions',
+    'HR services',
+    'HR consulting',
+    'HR management',
+    'HR technology',
+    'HR software',
+    'HR best practices',
+    'HR compliance',
+    'HR policies',
+    'future of work',
+    'remote work HR',
+    'hybrid work HR',
+    'digital transformation in HR',
+    'AI in HR',
+    'automation in HR',
+    'employee experience',
+    'employer branding',
+    'HR tech trends',
+    'HR innovation',
+    'global HR',
+    'international HR',
+    'HR in Europe',
+    'HR in Asia Pacific',
+    'cross-cultural HR',
+    'multinational HR',
+    'improve employee retention',
+    'reduce turnover',
+    'enhance employee productivity',
+    'streamline HR processes',
+    'cost-effective HR solutions',
+    'scalable HR services',
+    'custom HR packages',
+    'HR for business growth',
+    'Startify HR solutions',
+    'Startify HR services',
+    'Startify consulting',
+    'Startify HR packages',
+    'Startify HR technology',
+    'Startify HR innovation',
+    'hire Startify',
+    'contact Startify',
+    'Startify HR consultation',
+    'Startify HR services near me',
+    'book Startify HR services',
+    'Startify HR free trial',
+  ].join(', '),
 }: LayoutProps = Astro.props;
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#134e4a" />
-    <link rel="canonical" href={Astro.url} />
-    <title>{title}</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-  </head>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url} />
+
+    <!-- Title -->
+    <title>{title}</title>
+
+    <!-- Favicons with extensive browser/device support -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="HR Startify" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://hrstartify.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HR Startify" />
+    <meta
+      property="og:description"
+      content="HR Startify: Streamline recruitment, boost engagement, and ensure compliance with our tailored HR solutions."
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/images/e37c8676-b845-4103-8d67-2b48e7a18fa0.png?token=uUloEXPSLk2LOoDryHO_wKlrOfPu9XPmtVIBFlE3hNk&height=500&width=500&expires=33279436105"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="hrstartify.com" />
+    <meta property="twitter:url" content="https://hrstartify.com" />
+    <meta name="twitter:title" content="HR Startify" />
+    <meta
+      name="twitter:description"
+      content="Discover HR Startify – your ultimate HR solution. Streamline recruitment, boost employee engagement, and ensure compliance with our tailored packages. Elevate your HR game today!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/images/e37c8676-b845-4103-8d67-2b48e7a18fa0.png?token=uUloEXPSLk2LOoDryHO_wKlrOfPu9XPmtVIBFlE3hNk&height=500&width=500&expires=33279436105"
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Startify" />
+    <meta
+      name="copyright"
+      content={`Copyright © ${new Date().getFullYear()} Startify`}
+    />
+  </head>
   <body>
     <main>
       <Header client:only="react">

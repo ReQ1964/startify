@@ -1,12 +1,15 @@
 ---
-import Image from 'astro/components/Image.astro';
+import { Image } from 'astro:assets';
 import targetAudienceList from '@/data/targetAudienceList.json';
 import targetAudienceBanner from '@/src/assets/img/offer/offer-target-audience.png';
 import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 ---
 
 <UniversalWrapper>
-  <h1>Our Startify subscription packages will suit you if:</h1>
+  <div class="titleContainer">
+    <h1>is HR Startify right for you?</h1>
+    <h2>here&apos;s why businesses like yours choose HR Startify:</h2>
+  </div>
   <article>
     <Image
       src={targetAudienceBanner}
@@ -19,12 +22,19 @@ import UniversalWrapper from '../Layout/UniversalWrapper.astro';
 </UniversalWrapper>
 
 <style lang="scss">
-  h1 {
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     color: var(--text-color-secondary);
     margin-bottom: var(--content-blocks-gap-mobile);
     text-align: center;
     margin-top: 2rem;
-    font-size: 2rem;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  h1 {
   }
   article {
     display: grid;
