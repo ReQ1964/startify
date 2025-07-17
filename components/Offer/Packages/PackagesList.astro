@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-const allHrPackages = await getCollection('hrPackages');
+const allHrPackages = (await getCollection('hrPackages')).sort((a, b) => a.data.id - b.data.id);
 import UniversalWrapper from '../../Layout/UniversalWrapper.astro';
 import PackageComponent from '../Packages/PackageComponent.astro';
 
